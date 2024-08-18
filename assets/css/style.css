@@ -9,9 +9,9 @@
     font-family: "Roboto", sans-serif;
 }
 
-body {
+/* body {
     background: linear-gradient(to right, #22211c, #22211c);
-}
+} */
 
 .container {
     width: 80%;
@@ -132,10 +132,7 @@ header a {
 }
 
 @media (max-width: 320px) {
-    body {
-        background: linear-gradient(to right, rgba(34, 33, 28, 0), rgba(34, 33, 28, 0));
-    }
-
+    
     .nav__wrapper {
         width: 420px;
     }
@@ -155,10 +152,6 @@ header a {
 }
 
 @media (max-width: 375px) {
-    body {
-        background: linear-gradient(to right, rgba(34, 33, 28, 0), rgba(34, 33, 28, 0));
-
-    }
     .site-header {
         width: 100%;
     }
@@ -172,11 +165,6 @@ header a {
 }
 
 @media (max-width: 425px) {
-    body {
-        background: linear-gradient(to right, rgba(34, 33, 28, 0), rgba(34, 33, 28, 0));
-
-    }
-
     .site-header {
         width: 100%;
     }
