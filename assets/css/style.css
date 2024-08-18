@@ -6,17 +6,20 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    user-select: none;
     font-family: "Roboto", sans-serif;
 }
 
-/* body {
-    background: linear-gradient(to right, #22211c, #22211c);
-} */
+body {
+    background: linear-gradient(to right, #020316, #020316);
+}
 
 .container {
     width: 80%;
     margin: 0 auto;
 }
+
+/* header */
 
 header {
     position: fixed;
@@ -42,11 +45,35 @@ header a {
 }
 
 #one_section {
-    background-image: url('/assets/imgs/Hiss-background-8.jpg');
+    background-image: url('/assets/imgs/Hiss-background-2.jpg');
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: right;
+    background-size: auto;
+}
+
+.nav__item a {
+    display: block;
+    padding: 1rem 1.1rem;
+}
+
+.nav__toggle {
+    display: none;
+}
+
+.fgygukhlhg {
+    content: "Instagram";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #F58529, #FEDA77, #D62976, #DD2A7B, #8134AF, #515BD4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: -1;
 }
 
 @media (min-width: 600px) {
@@ -62,7 +89,6 @@ header a {
 @media (min-width: 600px) {
     .nav__wrapper {
         display: flex;
-
     }
 }
 
@@ -73,9 +99,9 @@ header a {
         right: 0;
         left: 0;
         z-index: -1;
-        padding-left: 160px;
+        text-align: center;
         padding-top: 15px;
-        background-color: #22211c;
+        background-color: #020316;
         visibility: hidden;
         opacity: 0;
         transform: translateY(-100%);
@@ -87,38 +113,6 @@ header a {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-@media (max-width: 599px) {
-    .nav__wrapper {
-        position: absolute;
-        top: -20%;
-        right: 0;
-        left: 0;
-        z-index: -1;
-        padding-left: 160px;
-        padding-top: 15px;
-        background-color: #22211c;
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    }
-
-    .nav__wrapper.active {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.nav__item a {
-    display: block;
-    padding: 1rem 1rem;
-}
-
-.nav__toggle {
-    display: none;
 }
 
 @media (max-width: 599px) {
@@ -132,7 +126,7 @@ header a {
 }
 
 @media (max-width: 320px) {
-    
+
     .nav__wrapper {
         width: 420px;
     }
@@ -144,7 +138,7 @@ header a {
     }
 
     #one_section {
-        background-image: url('/assets/imgs/Hiss-background-8.jpg');
+        background-image: url('/assets/imgs/Hiss-background-2.jpg');
         width: 300px;
         height: 100vh;
         background-size: cover;
@@ -157,7 +151,7 @@ header a {
     }
 
     #one_section {
-        background-image: url('/assets/imgs/Hiss-background-8.jpg');
+        background-image: url('/assets/imgs/Hiss-background-2.jpg');
         width: 100%;
         height: 100vh;
         background-size: cover;
@@ -170,8 +164,8 @@ header a {
     }
 
     #one_section {
-        background-image: url('/assets/imgs/Hiss-background-8.jpg');
-        width: 420px;
+        background-image: url('/assets/imgs/Hiss-background-2.jpg');
+        width: 425px;
         height: 100vh;
         background-size: cover;
     }
