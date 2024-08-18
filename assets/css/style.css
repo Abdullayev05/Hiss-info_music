@@ -133,11 +133,7 @@ header a {
 
 @media (max-width: 320px) {
     .nav__wrapper {
-        width: 500px;
-    }
-
-    nav {
-        margin-left: 100px;
+        width: 420px;
     }
 
     .site-header {
@@ -155,10 +151,6 @@ header a {
 }
 
 @media (max-width: 375px) {
-    nav {
-        margin-left: 100px;
-    }
-
     .site-header {
         width: 100%;
     }
@@ -172,12 +164,8 @@ header a {
 }
 
 @media (max-width: 425px) {
-    .container {
-        width: 100%;
-    }
-
     .site-header {
-        width: 80%;
+        width: 100%;
     }
 
     #one_section {
