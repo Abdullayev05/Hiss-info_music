@@ -132,6 +132,7 @@ header a {
 }
 
 @media (max-width: 320px) {
+
     .nav__wrapper {
         width: 420px;
     }
@@ -164,6 +165,11 @@ header a {
 }
 
 @media (max-width: 425px) {
+    body {
+        background: linear-gradient(to right, rgba(34, 33, 28, 0), rgba(34, 33, 28, 0));
+
+    }
+
     .site-header {
         width: 100%;
     }
