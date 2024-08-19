@@ -48,11 +48,9 @@ header a {
     background-image: url('/assets/imgs/Hiss-background-2.jpg');
     width: 100%;
     height: 100vh;
-    /* background-blend-mode: overlay; */
-    background: #020316;
-    background-repeat: no-repeat;
-    background-position: right;
     background-size: auto;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .nav__item a {
@@ -62,6 +60,31 @@ header a {
 
 .nav__toggle {
     display: none;
+}
+
+/* header end */
+
+.hiss-best h1 {
+    font-size: 90px;
+    text-align: left;
+    font-weight: 600;
+    color: #020316;
+}
+
+.hiss-best h1::after {
+    content: '"BEST"';
+    font-size: 90px;
+    text-align: left;
+    font-weight: 600;
+    color: #040d8a;
+}
+
+.hiss-best {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    height: 70vh;
 }
 
 @media (min-width: 600px) {
@@ -93,7 +116,6 @@ header a {
         visibility: hidden;
         opacity: 0;
         transform: translateY(-100%);
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     }
 
     .nav__wrapper.active {
@@ -131,6 +153,21 @@ header a {
         height: 100vh;
         background-size: cover;
     }
+
+    .hiss-best h1 {
+        font-size: 60px;
+        text-align: left;
+        font-weight: 600;
+        color: #FFF5F4;
+    }
+
+    .hiss-best h1::after {
+        content: '"BEST"';
+        font-size: 55px;
+        text-align: left;
+        font-weight: 600;
+        color: #4149b9;
+    }
 }
 
 @media (max-width: 375px) {
@@ -144,6 +181,21 @@ header a {
         height: 100vh;
         background-size: cover;
     }
+
+    .hiss-best h1 {
+        font-size: 69px;
+        text-align: left;
+        font-weight: 600;
+        color: #FFF5F4;
+    }
+
+    .hiss-best h1::after {
+        content: '"BEST"';
+        font-size: 70px;
+        text-align: left;
+        font-weight: 600;
+        color: #4149b9;
+    }
 }
 
 @media (max-width: 425px) {
@@ -154,6 +206,19 @@ header a {
     #one_section {
         background-image: url('/assets/imgs/Hiss-background-2.jpg');
         width: 425px;
+        height: 100vh;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        width: 100%;
+    }
+
+    #one_section {
+        background-image: url('/assets/imgs/Hiss-background-2.jpg');
+        width: 768px;
         height: 100vh;
         background-size: cover;
     }
