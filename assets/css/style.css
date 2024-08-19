@@ -62,20 +62,6 @@ header a {
     display: none;
 }
 
-.fgygukhlhg {
-    content: "Instagram";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #F58529, #FEDA77, #D62976, #DD2A7B, #8134AF, #515BD4);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    z-index: -1;
-}
-
 @media (min-width: 600px) {
     .site-header__wrapper {
         display: flex;
@@ -168,5 +154,12 @@ header a {
         width: 425px;
         height: 100vh;
         background-size: cover;
+    }
+}
+
+
+@media (min-width: 426px) and (max-width: 768px) {
+    #one_section {
+        background-size: contain;
     }
 }
