@@ -213,7 +213,7 @@ header a {
 @media (min-width: 376px) and (max-width: 425px) {
     .all_best_img img {
         width: 425px;
-        /* height: 100vh; */
+        height: 100vh;
     }
 }
 
