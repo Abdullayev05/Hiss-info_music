@@ -158,12 +158,12 @@ header a {
     .site-header {
         width: 100%;
         display: flex;
-        /* justify-content: space-between; */
+        justify-content: space-between;
     }
 
     .all_best_img img {
         width: 320px;
-        height: 100vh;
+        /* height: 100vh; */
     }
 
     .hiss-best h1 {
@@ -185,7 +185,7 @@ header a {
 @media (min-width: 321px) and (max-width: 375px) {
     .all_best_img img {
         width: 375px;
-        height: 100vh;
+        /* height: 100vh; */
     }
 }
 
@@ -213,7 +213,7 @@ header a {
 @media (min-width: 376px) and (max-width: 425px) {
     .all_best_img img {
         width: 425px;
-        height: 100vh;
+        /* height: 100vh; */
     }
 }
 
