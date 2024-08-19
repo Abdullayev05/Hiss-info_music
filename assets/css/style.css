@@ -118,7 +118,7 @@ header a {
 @media (max-width: 599px) {
     .nav__wrapper {
         position: absolute;
-        top: -20%;
+        /* top: -50%; */
         right: 0;
         left: 0;
         z-index: -1;
