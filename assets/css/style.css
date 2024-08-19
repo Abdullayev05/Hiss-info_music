@@ -158,7 +158,7 @@ header a {
     .site-header {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
 
     .all_best_img img {
@@ -225,7 +225,7 @@ header a {
 
 @media (min-width: 426px) and (max-width: 500px) {
     .all_best_img img {
-        width: 768px;
+        width: 500px;
         /* height: 100vh; */
     }
 }
