@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 /* #020316 */
 * {
     margin: 0;
@@ -38,9 +39,10 @@ header a {
     color: aliceblue;
     text-decoration: none;
 }
-main{
+
+/* main{
     background-color: #020316;
-}
+} */
 .site-header__wrapper {
     padding-top: 1rem;
     padding-bottom: 1rem;
