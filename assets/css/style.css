@@ -128,7 +128,7 @@ header a {
         visibility: hidden;
         opacity: 0;
         transform: translateY(-100%);
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out; 
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 
     }
 
@@ -164,10 +164,61 @@ header a {
     .all_best_img img {
         width: 320px;
         /* height: 100vh; */
+        position: relative;
+    }
+
+    .hiss-best {
+        /* text-align: center; */
+        margin: 0 auto;
+        z-index: 999;
+        position: absolute;
     }
 
     .hiss-best h1 {
-        font-size: 60px;
+        /* font-size: 10px; */
+        text-align: left;
+        font-weight: 600;
+        color: #FFF5F4;
+    }
+
+    .hiss-best h1::after {
+        content: '"BEST"';
+        /* font-size: 10px; */
+        text-align: left;
+        font-weight: 600;
+        color: #4149b9;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .all_best_img img {
+        width: 375px;
+        /* height: 100vh; */
+        position: relative;
+    }
+}
+
+@media (max-width: 375px) {
+    .site-header {
+        width: 100%;
+    }
+
+    .all_best_img {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* align-items: ; */
+    }
+
+    .hiss-best {
+        /* margin: 0 auto; */
+        top: calc(50% + 20px);
+        z-index: 999;
+        position: absolute;
+    }
+
+    .hiss-best h1 {
+        font-size: 55px;
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
@@ -182,20 +233,27 @@ header a {
     }
 }
 
-@media (min-width: 321px) and (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 425px) {
     .all_best_img img {
-        width: 375px;
-        /* height: 100vh; */
+        width: 425px;
+        position: relative;
     }
-}
+    .all_best_img {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* align-items: ; */
+    }
 
-@media (max-width: 375px) {
-    .site-header {
-        width: 100%;
+    .hiss-best {
+        /* margin: 0 auto; */
+        top: calc(50% + 20px);
+        z-index: 999;
+        position: absolute;
     }
 
     .hiss-best h1 {
-        font-size: 69px;
+        font-size: 60px;
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
@@ -203,17 +261,10 @@ header a {
 
     .hiss-best h1::after {
         content: '"BEST"';
-        font-size: 70px;
+        font-size: 60px;
         text-align: left;
         font-weight: 600;
         color: #4149b9;
-    }
-}
-
-@media (min-width: 376px) and (max-width: 425px) {
-    .all_best_img img {
-        width: 425px;
-        /* height: 100vh; */
     }
 }
 
@@ -226,7 +277,7 @@ header a {
 @media (min-width: 426px) and (max-width: 500px) {
     .all_best_img img {
         width: 500px;
-        /* height: 100vh; */
+        position: relative;
     }
 }
 
@@ -235,21 +286,39 @@ header a {
         width: 768px;
         /* height: 100vh; */
     }
+    .all_best_img {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* align-items: ; */
+    }
+
+    .hiss-best {
+        /* margin: 0 auto; */
+        top: calc(50% + 20px);
+        z-index: 999;
+        position: absolute;
+    }
+
+    .hiss-best h1 {
+        font-size: 90px;
+        text-align: left;
+        font-weight: 600;
+        color: #FFF5F4;
+    }
+
+    .hiss-best h1::after {
+        content: '"BEST"';
+        font-size: 90px;
+        text-align: left;
+        font-weight: 600;
+        color: #4149b9;
+    }
 }
 
 @media (max-width: 768px) {
     .site-header {
         width: 100%;
     }
-
-    /* .all_best_img img {
-        width: 768px;
-        height: 100vh;
-    } */
-    /* #one_section {
-        background-image: url('/assets/imgs/Hiss-background-2.jpg');
-        width: 768px;
-        height: 100vh;
-        background-size: cover;
-    } */
+    
 }
