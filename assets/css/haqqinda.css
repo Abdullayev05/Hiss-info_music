@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 70px;
+    border-radius: 20px;
+}
+
+header a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.site-header__wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav__item a {
+    display: block;
+    padding: 1rem 1.1rem;
+}
+
+.nav__toggle {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 600px) {
+    .site-header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .nav__wrapper {
+        display: flex;
+    }
+}
+
+@media (max-width: 599px) {
+    .nav__wrapper {
+        position: absolute;
+        top: -20%;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        text-align: center;
+        padding-top: 15px;
+        background-color: #020316;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+    }
+
+    .nav__wrapper.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 599px) {
+    .nav__toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        color: aliceblue;
+    }
+}
+
+@media (max-width: 320px) {
+    .site-header {
+        width: 100%;
+        display: flex;
+    }
+
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {}
+
+@media (max-width: 375px) {
+    .site-header {
+        width: 100%;
+    }
+
+
+}
+
+@media (min-width: 376px) and (max-width: 425px) {}
+
+@media (max-width: 425px) {
+    .site-header {
+        width: 100%;
+        display: flex;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {}
+
+@media (min-width: 426px) and (max-width: 768px) {}
+
+@media (max-width: 768px) {
+    .site-header {
+        width: 100%;
+    }
+
+}
