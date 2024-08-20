@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
     text-decoration: none;
     box-sizing: border-box;
     user-select: none;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -106,26 +106,20 @@ header a {
         display: flex;
     }
 
-    
+
 }
 
-@media (min-width: 321px) and (max-width: 375px) {
-   
-}
+@media (min-width: 321px) and (max-width: 375px) {}
 
 @media (max-width: 375px) {
     .site-header {
         width: 100%;
     }
 
-    
+
 }
 
-@media (min-width: 376px) and (max-width: 425px) {
-    
-
-    
-}
+@media (min-width: 376px) and (max-width: 425px) {}
 
 @media (max-width: 425px) {
     .site-header {
@@ -133,18 +127,13 @@ header a {
     }
 }
 
-@media (min-width: 426px) and (max-width: 500px) {
-    
-}
+@media (min-width: 426px) and (max-width: 500px) {}
 
-@media (min-width: 426px) and (max-width: 768px) {
-    
-    
-}
+@media (min-width: 426px) and (max-width: 768px) {}
 
 @media (max-width: 768px) {
     .site-header {
         width: 100%;
     }
-    
+
 }
