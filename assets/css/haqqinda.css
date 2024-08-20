@@ -72,7 +72,7 @@ header a {
 @media (max-width: 599px) {
     .nav__wrapper {
         position: absolute;
-        top: -20%;
+        top: 0;
         right: 0;
         left: 0;
         z-index: -1;
@@ -83,7 +83,6 @@ header a {
         opacity: 0;
         transform: translateY(-100%);
         transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-
     }
 
     .nav__wrapper.active {

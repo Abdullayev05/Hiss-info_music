@@ -118,7 +118,7 @@ header a {
 @media (max-width: 599px) {
     .nav__wrapper {
         position: absolute;
-        top: 0;
+        top: 10%;
         right: 0;
         left: 0;
         z-index: -1;
@@ -129,7 +129,6 @@ header a {
         opacity: 0;
         transform: translateY(-100%);
         transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-
     }
 
     .nav__wrapper.active {
@@ -238,6 +237,7 @@ header a {
         width: 425px;
         position: relative;
     }
+
     .all_best_img {
         display: flex;
         justify-content: center;
@@ -286,6 +286,7 @@ header a {
         width: 768px;
         /* height: 100vh; */
     }
+
     .all_best_img {
         display: flex;
         justify-content: center;
@@ -319,5 +320,12 @@ header a {
 @media (max-width: 768px) {
     .site-header {
         width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .all_best_img img {
+        width: 1024px;
+        /* height: 100vh; */
     }
 }
