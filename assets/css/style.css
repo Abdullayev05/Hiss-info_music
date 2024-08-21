@@ -24,7 +24,7 @@ header {
     /* top: 20px; */
     left: 0;
     z-index: 1000;
-    background-color: #040d8a77;
+    /* background-color: #040d8a77; */
 }
 
 header img {
@@ -181,10 +181,6 @@ header a {
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
-    header {
-        background-color: transparent;
-    }
-
     .all_best_img img {
         width: 375px;
         /* height: 100vh; */
