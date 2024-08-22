@@ -57,11 +57,12 @@ header a {
 
 /* # one section start */
 
+
 .all_best_img {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
-    /* position: absolute; */
+    position: absolute;
     z-index: -1;
     right: 0;
     gap: 15px;
@@ -85,7 +86,7 @@ header a {
 .hiss-best {
     display: flex;
     justify-content: center;
-    /* height: 70vh; */
+    height: 70vh;
 }
 
 /* # one section end */
@@ -97,12 +98,9 @@ header a {
 #two_section {
     position: relative;
     text-align: center;
-    top: 50px;
+    top: 1000px;
     padding-top: 20px;
-}
-
-.imgs-words {
-    margin-top: 50px;
+    /* background-color: #040d8a; */
 }
 
 .imgs-words img {
@@ -349,4 +347,15 @@ header a {
         width: 1024px;
         /* height: 100vh; */
     }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    #two_section {
+        position: relative;
+        text-align: center;
+        top: 1000px;
+        padding-top: 20px;
+        /* background-color: #040d8a; */
+    }
+
 }
