@@ -161,6 +161,7 @@ header a {
 }
 
 @media (max-width: 320px) {
+    
     header {
         background-color: transparent;
     }
@@ -203,11 +204,12 @@ header a {
         color: #4149b9;
     }
     #two_section{
-        top: 430px;
+        top: 200px;
     }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
+    
     header {
         background-color: transparent;
     }
@@ -216,6 +218,9 @@ header a {
         width: 375px;
         /* height: 100vh; */
         position: relative;
+    }
+    #two_section{
+        top: 200px;
     }
 }
 
@@ -252,6 +257,7 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
+    
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
@@ -288,6 +294,9 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
+    #two_section{
+        top: 400px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -300,6 +309,9 @@ header a {
     .all_best_img img {
         width: 500px;
         position: relative;
+    }
+    #two_section{
+        top: 400px;
     }
 }
 
