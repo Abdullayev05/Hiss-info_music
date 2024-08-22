@@ -206,10 +206,15 @@ header a {
     /* #two_section{
         top: 900px;
     } */
+    #two_section {
+        top: 200px;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
-    
+    #two_section {
+        top: 200px;
+    }
     header {
         background-color: transparent;
     }
