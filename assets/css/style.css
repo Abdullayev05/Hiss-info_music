@@ -204,7 +204,7 @@ header a {
         color: #4149b9;
     }
     #two_section{
-        top: 200px;
+        top: 400px;
     }
 }
 
@@ -219,9 +219,9 @@ header a {
         /* height: 100vh; */
         position: relative;
     }
-    #two_section{
-        top: 200px;
-    }
+    /* #two_section{
+        top: 300px;
+    } */
 }
 
 @media (max-width: 375px) {
@@ -294,9 +294,9 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
-    #two_section{
+    /* #two_section{
         top: 400px;
-    }
+    } */
 }
 
 @media (max-width: 425px) {
@@ -310,9 +310,9 @@ header a {
         width: 500px;
         position: relative;
     }
-    #two_section{
+    /* #two_section{
         top: 400px;
-    }
+    } */
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
