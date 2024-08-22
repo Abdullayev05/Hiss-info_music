@@ -207,13 +207,13 @@ header a {
         top: 900px;
     } */
     #two_section {
-        top: -20%;
+        top: 20%;
     }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
     #two_section {
-        top: -20%;
+        top: 20%;
     }
     header {
         background-color: transparent;
