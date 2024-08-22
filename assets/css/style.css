@@ -224,6 +224,9 @@ header a {
     /* #two_section{
         top: 300px;
     } */
+    #two_section {
+        top: 10px;
+    } 
 }
 
 @media (max-width: 375px) {
@@ -259,7 +262,9 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
-
+    #two_section {
+        top: 100px;
+    } 
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
@@ -297,9 +302,9 @@ header a {
         color: #4149b9;
     }
 
-    /* #two_section{
+    #two_section{
         top: 400px;
-    } */
+    }
 }
 
 @media (max-width: 425px) {
