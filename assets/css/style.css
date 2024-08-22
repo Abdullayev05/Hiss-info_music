@@ -98,7 +98,7 @@ header a {
 #two_section {
     position: relative;
     text-align: center;
-    top: 1000px;
+    top: 1200px;
     padding-top: 20px;
     /* background-color: #040d8a; */
 }
@@ -203,9 +203,9 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
-    #two_section{
+    /* #two_section{
         top: 900px;
-    }
+    } */
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
