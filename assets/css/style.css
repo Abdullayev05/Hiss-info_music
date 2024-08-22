@@ -202,6 +202,9 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
+    #two_section{
+        top: 430px;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
@@ -347,15 +350,4 @@ header a {
         width: 1024px;
         /* height: 100vh; */
     }
-}
-
-@media (min-width: 1024px) and (max-width: 1440px) {
-    #two_section {
-        position: relative;
-        text-align: center;
-        top: 1000px;
-        padding-top: 20px;
-        /* background-color: #040d8a; */
-    }
-
 }
