@@ -97,16 +97,15 @@ header a {
 
 #two_section {
     position: relative;
-    text-align: left;
-    top: 870px;
+    text-align: center;
+    top: 800px;
+    padding-top: 20px;
     /* background-color: #040d8a; */
 }
 
 .imgs-words img {
-    margin-top: 50px;
     width: 300px;
     height: 300px;
-    border-radius: 20px;
 }
 
 
@@ -162,7 +161,7 @@ header a {
 }
 
 @media (max-width: 320px) {
-    
+
     header {
         background-color: transparent;
     }
@@ -204,9 +203,7 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
-    /* #two_section{
-        top: 900px;
-    } */
+
     #two_section {
         top: 20%;
     }
@@ -216,6 +213,7 @@ header a {
     #two_section {
         top: 20%;
     }
+
     header {
         background-color: transparent;
     }
@@ -225,7 +223,7 @@ header a {
         /* height: 100vh; */
         position: relative;
     }
-   
+
 }
 
 @media (max-width: 375px) {
@@ -261,7 +259,7 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
-    
+
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
@@ -309,6 +307,7 @@ header a {
         width: 500px;
         position: relative;
     }
+
     /* #two_section{
         top: 400px;
     } */
