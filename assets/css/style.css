@@ -62,7 +62,7 @@ header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: absolute; */
+    position: absolute;
     z-index: -1;
     right: 0;
     gap: 15px;
@@ -87,7 +87,6 @@ header a {
     display: flex;
     justify-content: center;
     height: 70vh;
-    position: relative;
 }
 
 /* # one section end */
@@ -99,7 +98,7 @@ header a {
 #two_section {
     position: relative;
     text-align: center;
-    /* top: 1000px; */
+    top: 1000px;
     padding-top: 20px;
     /* background-color: #040d8a; */
 }
@@ -205,9 +204,9 @@ header a {
         color: #4149b9;
     }
 
-    /* #two_section {
+    #two_section {
         top: 10px;
-    }  */
+    } 
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
