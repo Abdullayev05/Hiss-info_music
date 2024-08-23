@@ -216,7 +216,12 @@ header a {
     header {
         background-color: transparent;
     }
-
+    .hiss-best {
+        /* text-align: center; */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     .all_best_img img {
         width: 375px;
         /* height: 100vh; */
