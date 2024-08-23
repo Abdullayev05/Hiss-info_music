@@ -83,11 +83,12 @@ header a {
     color: #040d8a;
 }
 
-/* .hiss-best {
+.hiss-best {
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+    height: 100px;
+}
 
 /* # one section end */
 
@@ -180,13 +181,13 @@ header a {
         /* height: 100vh; */
         position: relative;
     }
- 
-     .hiss-best {
-        /* text-align: start; */
-        margin-bottom:300px ;
+
+    .hiss-best {
+        /* text-align: center; */
+        margin: 0 auto;
         z-index: 999;
         position: absolute;
-    }  
+    }
 
     .hiss-best h1 {
         /* font-size: 10px; */
@@ -238,9 +239,8 @@ header a {
     }
 
     .hiss-best {
-        margin-bottom:300px ;
-
-        /* top: calc(50% + 20px); */
+        /* margin: 0 auto; */
+        top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
     }
@@ -259,6 +259,7 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
+
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
