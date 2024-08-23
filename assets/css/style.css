@@ -237,11 +237,11 @@ header a {
         /* align-items: ; */
     }
 
-    /* .hiss-best {
-        top: calc(50% + 20px);
+    .hiss-best {
+        /* top: calc(50% + 20px); */
         z-index: 999;
         position: absolute;
-    } */
+    }
 
     .hiss-best h1 {
         font-size: 55px;
@@ -271,11 +271,11 @@ header a {
         justify-content: center;
     }
 
-    /* .hiss-best {
+    .hiss-best {
         top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
-    } */
+    }
 
     .hiss-best h1 {
         font-size: 60px;
