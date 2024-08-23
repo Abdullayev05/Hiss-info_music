@@ -86,7 +86,6 @@ header a {
 .hiss-best {
     display: flex;
     justify-content: center;
-    height: 70vh;
 }
 
 /* # one section end */
@@ -98,8 +97,9 @@ header a {
 #two_section {
     position: relative;
     text-align: center;
-    /* top: 900px; */
+    top: 900px;
     /* padding-top: 20px; */
+    /* background-color: #040d8a; */
 }
 
 .imgs-words img {
@@ -183,30 +183,29 @@ header a {
 
     .hiss-best {
         /* text-align: center; */
+        margin: 0 auto;
+        z-index: 999;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        margin-top: -200px;
     }
 
     .hiss-best h1 {
+        /* font-size: 10px; */
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
-        display: none;
-
     }
 
     .hiss-best h1::after {
         content: '"BEST"';
+        /* font-size: 10px; */
         text-align: left;
         font-weight: 600;
         color: #4149b9;
-        display: none;
-
     }
 
     /* #two_section {
-        top: 100px;
+        top: 1000px;
     } */
 }
 
@@ -240,10 +239,12 @@ header a {
     }
 
     .hiss-best {
-        margin: 0 auto;
-        top: calc(50% + 20px);
+        /* margin: 0 auto; */
+        /* top: calc(50% + 20px); */
         z-index: 999;
         position: absolute;
+        margin-top: -200px;
+
     }
 
     .hiss-best h1 {
@@ -251,7 +252,6 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
-        display: none;
     }
 
     .hiss-best h1::after {
@@ -260,8 +260,6 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #4149b9;
-        display: none;
-
     }
 
 }
