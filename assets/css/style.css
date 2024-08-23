@@ -186,7 +186,7 @@ header a {
         margin: 0 auto;
         z-index: 999;
         position: absolute;
-        margin-top: -200px;
+        margin-top: -500px;
     }
 
     .hiss-best h1 {
@@ -222,7 +222,7 @@ header a {
         /* top: calc(50% + 20px); */
         z-index: 999;
         position: absolute;
-        margin-top: -200px;
+        margin-top: -500px;
 
     }
     .all_best_img img {
@@ -250,7 +250,7 @@ header a {
         /* top: calc(50% + 20px); */
         z-index: 999;
         position: absolute;
-        margin-top: -200px;
+        margin-top: -500px;
 
     }
 
