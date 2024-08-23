@@ -83,11 +83,11 @@ header a {
     color: #040d8a;
 }
 
-/* .hiss-best {
+.hiss-best {
     display: flex;
     justify-content: center;
-    align-items: center;
-} */
+    height: 70vh;
+}
 
 /* # one section end */
 
@@ -220,7 +220,7 @@ header a {
     .all_best_img img {
         width: 375px;
         /* height: 100vh; */
-        /* position: relative; */
+        position: relative;
     }
 
 }
@@ -238,7 +238,8 @@ header a {
     }
 
     .hiss-best {
-        /* top: calc(50% + 20px); */
+        /* margin: 0 auto; */
+        top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
     }
@@ -272,6 +273,7 @@ header a {
     }
 
     .hiss-best {
+        /* margin: 0 auto; */
         top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
