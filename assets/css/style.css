@@ -186,13 +186,14 @@ header a {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        display: none;
     }
 
-    /* .hiss-best h1 {
+    .hiss-best h1 {
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
+        display: none;
+
     }
 
     .hiss-best h1::after {
@@ -200,11 +201,13 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #4149b9;
-    } */
+        display: none;
 
-    #two_section {
-        top: 100px;
     }
+
+    /* #two_section {
+        top: 100px;
+    } */
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
@@ -241,14 +244,14 @@ header a {
         top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
-        display: none;
     }
 
-    /* .hiss-best h1 {
+    .hiss-best h1 {
         font-size: 55px;
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
+        display: none;
     }
 
     .hiss-best h1::after {
@@ -257,7 +260,9 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #4149b9;
-    } */
+        display: none;
+
+    }
 
 }
 
