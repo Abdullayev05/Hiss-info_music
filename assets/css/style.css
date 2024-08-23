@@ -86,7 +86,8 @@ header a {
 .hiss-best {
     display: flex;
     justify-content: center;
-    /* height: 50vh; */
+    align-items: center;
+    height: 20vh;
 }
 
 /* # one section end */
