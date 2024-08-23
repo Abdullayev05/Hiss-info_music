@@ -62,7 +62,7 @@ header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     z-index: -1;
     right: 0;
     gap: 15px;
@@ -98,7 +98,7 @@ header a {
 #two_section {
     position: relative;
     text-align: center;
-    top: 900px;
+    /* top: 900px; */
     /* padding-top: 20px; */
     /* background-color: #040d8a; */
 }
@@ -187,6 +187,7 @@ header a {
         margin: 0 auto;
         z-index: 999;
         position: absolute;
+        display: none;
     }
 
     .hiss-best h1 {
@@ -194,6 +195,8 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
+        display: none;
+
     }
 
     .hiss-best h1::after {
@@ -202,17 +205,19 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #4149b9;
+        display: none;
+
     }
 
-    #two_section {
+    /* #two_section {
         top:-500px;
-    }
+    } */
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
-    #two_section {
+    /* #two_section {
         top: -500px;
-    }
+    } */
 
     header {
         background-color: transparent;
@@ -243,6 +248,8 @@ header a {
         top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
+        display: none;
+
     }
 
     .hiss-best h1 {
@@ -250,6 +257,8 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
+        display: none;
+        
     }
 
     .hiss-best h1::after {
@@ -258,6 +267,8 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #4149b9;
+        display: none;
+
     }
 
 }
@@ -278,6 +289,8 @@ header a {
         top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
+        display: none;
+
     }
 
     .hiss-best h1 {
@@ -285,6 +298,8 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
+        display: none;
+
     }
 
     .hiss-best h1::after {
@@ -293,6 +308,8 @@ header a {
         text-align: left;
         font-weight: 600;
         color: #4149b9;
+        display: none;
+
     }
 }
 
