@@ -238,7 +238,7 @@ header a {
     }
 
     .hiss-best {
-        top: calc(20% + 20px);
+        /* top: calc(50% + 20px); */
         z-index: 999;
         position: absolute;
     }
@@ -273,7 +273,7 @@ header a {
 
     .hiss-best {
         /* margin: 0 auto; */
-        top: calc(50% + 20px);
+        /* top: calc(50% + 20px); */
         z-index: 999;
         position: absolute;
     }
