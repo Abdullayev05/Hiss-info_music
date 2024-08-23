@@ -183,9 +183,9 @@ header a {
 
     .hiss-best {
         /* text-align: center; */
-        margin: 0 auto;
-        z-index: 999;
         position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .hiss-best h1 {
@@ -238,7 +238,7 @@ header a {
     }
 
     .hiss-best {
-        /* margin: 0 auto; */
+        margin: 0 auto;
         top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
