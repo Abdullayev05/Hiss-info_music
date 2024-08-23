@@ -99,7 +99,7 @@ header a {
     position: relative;
     text-align: center;
     top: 900px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     /* background-color: #040d8a; */
 }
 
@@ -205,13 +205,13 @@ header a {
     }
 
     #two_section {
-        top:-100px;
+        top:-500px;
     }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
     #two_section {
-        top: -100px;
+        top: -500px;
     }
 
     header {
