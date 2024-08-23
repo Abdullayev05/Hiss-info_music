@@ -217,7 +217,14 @@ header a {
     header {
         background-color: transparent;
     }
+    .hiss-best {
+        /* margin: 0 auto; */
+        /* top: calc(50% + 20px); */
+        z-index: 999;
+        position: absolute;
+        margin-top: -200px;
 
+    }
     .all_best_img img {
         width: 375px;
         /* height: 100vh; */
