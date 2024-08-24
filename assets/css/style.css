@@ -225,34 +225,22 @@ details[open] {
 }
 
 @media (max-width: 320px) {
-    .imgs-words {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 
     header {
         background-color: transparent;
     }
 
-    /* .nav__wrapper {
-        width: 420px;
-    } */
-
     .site-header {
         width: 100%;
         display: flex;
-        /* justify-content: space-between; */
     }
 
     .all_best_img img {
         width: 320px;
-        /* height: 100vh; */
         position: relative;
     }
 
     .hiss-best {
-        /* text-align: center; */
         margin: 0 auto;
         z-index: 999;
         position: absolute;
@@ -260,34 +248,28 @@ details[open] {
     }
 
     .hiss-best h1 {
-        /* font-size: 10px; */
         text-align: left;
         font-weight: 600;
         color: #FFF5F4;
         display: none;
-
     }
 
     .hiss-best h1::after {
         content: '"BEST"';
-        /* font-size: 10px; */
         text-align: left;
         font-weight: 600;
         color: #4149b9;
         display: none;
-
     }
 
-    /* #two_section {
-        top:-500px;
-    } */
+    .imgs-words {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
-    /* #two_section {
-        top: -500px;
-    } */
-
     header {
         background-color: transparent;
     }
@@ -297,6 +279,7 @@ details[open] {
         /* height: 100vh; */
         position: relative;
     }
+
     .imgs-words {
         display: flex;
         flex-direction: column;
@@ -341,9 +324,13 @@ details[open] {
         font-weight: 600;
         color: #4149b9;
         display: none;
-
     }
 
+    .imgs-words {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
@@ -384,7 +371,14 @@ details[open] {
         display: none;
 
     }
-     .imgs-words {
+
+    .imgs-words {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .imgs-words {
         display: flex;
         flex-direction: column;
         justify-content: center;
