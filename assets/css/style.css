@@ -225,10 +225,11 @@ details[open] {
 }
 
 @media (max-width: 320px) {
-    /* .imgs-words {
+    .imgs-words {
         display: flex;
         flex-direction: column;
-    } */
+        justify-content: center;
+    }
 
     header {
         background-color: transparent;
@@ -296,7 +297,11 @@ details[open] {
         /* height: 100vh; */
         position: relative;
     }
-
+    .imgs-words {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 375px) {
@@ -378,6 +383,11 @@ details[open] {
         color: #4149b9;
         display: none;
 
+    }
+     .imgs-words {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
