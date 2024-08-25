@@ -108,10 +108,9 @@ header a {
     margin-top: 50px;
 }
 
-details[open] {
-    /* Açılan zaman detalın aşağıya doğru genişlənməsini təmin edir */
+/* details[open] {
     display: block;
-}
+} */
 
 .song-container {
     background-color: #f5dbdb;
@@ -120,6 +119,7 @@ details[open] {
     max-width: 400px;
     text-align: center;
     padding: 20px;
+    flex: 3;
 }
 
 .song-details img {
