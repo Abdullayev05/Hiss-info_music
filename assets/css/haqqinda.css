@@ -49,6 +49,36 @@ header a {
     display: none;
 }
 
+section {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.info-img-words {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info-hiss {
+    position: relative;
+    max-width: 500px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.info-hiss img {
+    float: left;
+    margin-right: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.info-hiss p {
+    text-align: justify;
+}
 
 
 
@@ -107,9 +137,17 @@ header a {
         width: 100%;
         display: flex;
     }
-
-
 }
+
+.info-hiss img {
+    float: left;
+    margin-right: 20px;
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
 
 @media (min-width: 321px) and (max-width: 375px) {}
 
