@@ -126,23 +126,16 @@ section {
         width: 100%;
         display: flex;
     }
+
     .videos video {
-        width: 190px;
-        border-radius: 15px;
-        overflow: hidden;
-        object-fit: contain;
-        flex: 4;
+        width: 290px;
     }
 
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
     .videos video {
-        width: 200px;
-        border-radius: 15px;
-        overflow: hidden;
-        object-fit: contain;
-        flex: 4;
+        width: 190px;
     }
 }
 
@@ -152,21 +145,13 @@ section {
     }
 
     .videos video {
-        width: 200px;
-        border-radius: 15px;
-        overflow: hidden;
-        object-fit: contain;
-        flex: 4;
+        width: 290px;
     }
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
     .videos video {
-        width: 200px;
-        border-radius: 15px;
-        overflow: hidden;
-        object-fit: contain;
-        flex: 4;
+        width: 290px;
     }
 }
 
@@ -175,12 +160,9 @@ section {
         width: 100%;
         display: flex;
     }
+
     .videos video {
-        width: 270px;
-        border-radius: 15px;
-        overflow: hidden;
-        object-fit: contain;
-        flex: 4;
+        width: 290px;
     }
 }
 
@@ -200,5 +182,5 @@ section {
     .site-header {
         width: 100%;
     }
-    
+
 }
