@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kliplər</title>
     <link rel="stylesheet" href="../css/klipler.css">
+    <script defer src="../js/klipler.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script defer src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+
+<body style="background-color: #DEE0EC;">
     <header class="site-header">
         <div class="container">
             <div class="wrapper site-header__wrapper">
@@ -49,8 +73,7 @@
                                 </a>
                                 <a class="dropdown-item" href="https://music.apple.com/az/artist/hiss/1485654111"
                                     style="display:flex;align-items: center;">
-                                    <img src="../imgs/apple-music.jpg" style="width: 170px;padding-left: 5px;"
-                                        alt="">
+                                    <img src="../imgs/apple-music.jpg" style="width: 170px;padding-left: 5px;" alt="">
                                 </a>
                             </div>
                         </div>
@@ -59,5 +82,111 @@
             </div>
         </div>
     </header>
+    <section>
+        <div class="container">
+            <div class="videos">
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Best</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/Best-klip.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Kədərli bölüm</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/kederli-bolum.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Dilək</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/dilek.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Biology</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/biology.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Etiraf</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/etiraf-klip.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Laylay</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/laylay.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Nostalgiya</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/nostalgiya.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3> Mənə pis olma</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/mene-pis-olma.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Unuduram</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/unuduram.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Busan</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/busan.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Çək</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/cek.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Şans</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/sans.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Sayıram</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/sayiram.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Sevdim</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/sevdim.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Bela</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/bela.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>İstəmirəm</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/istemirem.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Cəsarət</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/cesaret.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Karma</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/karma.mp4" controls></video>
+                </div>
+                <div style="position: relative; display: inline-block;" class="video-name">
+                    <h3>Kəpənəklər</h3>
+                    <video id="myVideo" src="../hiss-klips-videos/kepenekler.mp4" controls></video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const video = document.getElementById('myVideo');
+        const playIcon = document.querySelector('.play-icon');
+        const pauseIcon = document.querySelector('.pause-icon');
+        playIcon.onclick = function () {
+            video.play();
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+            setTimeout(() => pauseIcon.style.display = 'none', 1000);
+        };
+        video.onclick = function () {
+            if (video.paused) {
+                video.play();
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+                setTimeout(() => pauseIcon.style.display = 'none', 1000);
+            } else {
+                video.pause();
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+            }
+        };
+    </script>
 </body>
+
 </html>

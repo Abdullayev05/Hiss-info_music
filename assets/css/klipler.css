@@ -49,6 +49,25 @@ header a {
     display: none;
 }
 
+section {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-name {
+    margin-top: 20px;
+}
+
+.videos video {
+    width: 270px;
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: contain;
+    flex: 4;
+}
+
+
 
 
 
