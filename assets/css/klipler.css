@@ -127,7 +127,7 @@ section {
         display: flex;
     }
     .videos video {
-        width: 200px;
+        width: 190px;
         border-radius: 15px;
         overflow: hidden;
         object-fit: contain;
