@@ -69,6 +69,49 @@ section {
 
 
 
+/* footer start */
+.footer {
+    /* background-color: #333; */
+    /* color: #fff; */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #020316;
+    margin-top: 100px;
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #f0f2f3;
+    transition: box-shadow 0.3s ease;
+}
+
+.sosial-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.sosial-media i {
+    color: #020316;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* footer end */
+
+
 
 
 
@@ -130,12 +173,41 @@ section {
     .videos video {
         width: 290px;
     }
+    .footer-content {
+        padding: 0 10px;
+    }
 
+    .footer span {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: #f0f2f3;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .sosial-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 30px;
+    }
+
+    .sosial-media i {
+        color: #020316;
+        font-size: 20px;
+        padding-top: 15px;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
     .videos video {
-        width: 190px;
+        width: 290px;
     }
 }
 
