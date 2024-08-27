@@ -73,7 +73,8 @@ body {
     display: flex;
     user-select: none;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
     background-color: #e5e7e9;
     font-family: 'Quicksand', sans-serif;
     -webkit-tap-highlight-color: transparent;
@@ -112,6 +113,7 @@ body {
     flex-direction: column;
     background-color: white;
     height: var(--parent-height);
+    margin-top: 100px;
 }
 
 .player__header {
