@@ -54,7 +54,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 style="background-color: transparent; border: 0 solid #020316; padding-top: 17px; box-shadow: none;">
                                 Sosial Şəbəkələr və Musiqi Platformaları </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-left: 70px;">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-left: 70px; animation: slideIn 1s forwards;">
                                 <a class="dropdown-item"
                                     href="https://www.instagram.com/thisishiss?igsh=cTV6cTFkMWlqajQ3"
                                     style="display:flex;align-items: center; justify-content: center;">
@@ -213,8 +213,13 @@
                     <a href="https://music.apple.com/az/artist/hiss/1485654111"><i class="fa-solid fa-music"></i></a>
                 </div>
             </div>
-            <span> &copy; 2024 By Abdullayev Mahammadaga.</span>
-        </div>
+            <footer>
+                <span>&copy; <span id="year"></span> By Abdullayev Mahammadaga.</span>
+            </footer>
+        
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>        </div>
     </footer>
 </body>
 

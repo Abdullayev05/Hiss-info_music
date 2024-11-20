@@ -49,6 +49,18 @@ header a {
     display: none;
 }
 
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(0) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale();
+    }
+}
+
 html {
     box-sizing: border-box;
     --parent-height: 20em;
@@ -477,6 +489,7 @@ img[alt="pause-icon"] {
     section {
         padding-top: 350px;
     }
+
     .footer-content {
         padding: 0 10px;
     }
@@ -507,6 +520,7 @@ img[alt="pause-icon"] {
         font-size: 20px;
         padding-top: 15px;
     }
+
     /* .player {
         width: 17.15em;
         display: flex;

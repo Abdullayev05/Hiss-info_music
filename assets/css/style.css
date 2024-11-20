@@ -51,6 +51,19 @@ header a {
     display: none;
 }
 
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(0) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale();
+    }
+}
+
+
 
 /* header end */
 
