@@ -7,7 +7,6 @@
     <title>Hiss haqqında veb-sayt</title>
     <meta property="og:title" content="Hiss haqqında veb-sayt" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -23,6 +22,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script defer src="./assets/js/app.js"></script>
+    <script defer src="./assets/js/drop.js"></script>
     <script defer src="./assets/js/service-worker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -50,31 +50,31 @@
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 style="background-color: transparent; border: 0; padding-top: 17px; box-shadow: none;">
-                                Sosial Şəbəkələr və Musiqi Platformaları </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"
-                                style="margin-left: 70px; animation: slideIn 1s forwards;">
+                                Sosial Şəbəkələr və Musiqi Platformaları
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dropdownMenu"
+                                style="width: 350px;">
                                 <a class="dropdown-item"
-                                    href="https://www.instagram.com/thisishiss?igsh=cTV6cTFkMWlqajQ3"
-                                    style="display:flex;align-items: center; justify-content: center;">
-                                    <img src="./assets/imgs/instagram.jpg" style="width: 170px;" alt="">
+                                    href="https://www.instagram.com/thisishiss?igsh=cTV6cTFkMWlqajQ3">
+                                    <img src="https://www.citypng.com/public/uploads/preview/square-instagram-logo-photos-social-media-701751694793082uj6ej5fkfx.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
-                                <a class="dropdown-item" href="https://www.tiktok.com/@realhiss?_t=8p43VlvzHNs&_r=1"
-                                    style="display:flex;gap: 10px;align-items: center;">
-                                    <img src="./assets/imgs/tiktok.jpg" style="width: 170px;" alt="">
+                                <a class="dropdown-item" href="https://www.tiktok.com/@realhiss?_t=8p43VlvzHNs&_r=1">
+                                    <img src="https://img.freepik.com/premium-vector/set-tiktok-app-icons-social-media-logo-vector-illustration_277909-592.jpg"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
-                                <a class="dropdown-item" href="https://youtube.com/@thisishiss?si=Lc1-DKaREx4qS98K"
-                                    style="display:flex;gap: 10px;align-items: center;">
-                                    <img src="./assets/imgs/youtube.jpg" style="width: 170px;" alt="">
+                                <a class="dropdown-item" href="https://youtube.com/@thisishiss?si=Lc1-DKaREx4qS98K">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
                                 <a class="dropdown-item"
-                                    href="https://open.spotify.com/artist/3G5xL8UA1bD6a2i4o1AvwF?si=3HCsO_zmRVqUXcYNk7bN5g"
-                                    style="display:flex;align-items: center;">
-                                    <img src="./assets/imgs/spotify.jpg" style="width: 170px;" alt="">
+                                    href="https://open.spotify.com/artist/3G5xL8UA1bD6a2i4o1AvwF?si=3HCsO_zmRVqUXcYNk7bN5g">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/480px-Spotify_logo_without_text.svg.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
-                                <a class="dropdown-item" href="https://music.apple.com/az/artist/hiss/1485654111"
-                                    style="display:flex;align-items: center;">
-                                    <img src="./assets/imgs/apple-music.jpg" style="width: 170px;padding-left: 5px;"
-                                        alt="">
+                                <a class="dropdown-item" href="https://music.apple.com/az/artist/hiss/1485654111">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/0/747.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
                             </div>
                         </div>
@@ -105,6 +105,96 @@
                     <h3>Musiqilər haqqında</h3>
                 </div>
                 <div class="imgs-words">
+                    <div class="song-container">
+                        <div class="song-details">
+                            <img src="./assets/imgs-3/36749aa2abbc4609162afbbea6898f6a.1000x1000x1.jpg" alt="">
+                            <h2 class="song-title">Bakı tanısın</h2>
+                            <p class="song-lyrics">Alınırsa, adamlığı qoruyun!</p>
+                            <p class="online-date">Onlayn olduğu tarix: 24 Dekabr 2024</p>
+                            <details>
+                                <summary style="list-style: revert;">
+                                    Musiqi sözləri
+                                </summary>
+                                <p style="padding-top: 20px;">
+                                    Daş atırsan arxasına yetənə <br>
+                                    Mənim olanlardan axı sənə nə?! <br>
+                                    Qafiyələrim beyninə səpələnir <br>
+                                    Zirvədən alçaq görsənir təpələr <br>
+
+                                    Bax indi tələs, bax indi tələs <br>
+                                    Bu da yeni stil, bu da yeni tərz <br>
+                                    Sənlə oynamağa yoxumdur həvəs <br>
+                                    Salar yoxsa bütün qulaqlara səs <br>
+
+                                    Qəribədir, uduzacağını bilə-bilə <br>
+                                    Qoydun pulun tamamın <br>
+                                    Qəribədir, necə olur, adam <br>
+                                    Ömür boyu tanımasın adamın <br>
+
+                                    Şeytan deyir, yaz açıq, necə varsa <br>
+                                    Bütün üzlərini Bakı tanısın <br>
+                                    Bakı tanısın <br>
+
+                                    İndi verin hamısın (sın) <br>
+                                    Mənə tez <br>
+                                    Bu hesab günü çatır tası bankın <br>
+                                    Verin hamısın (sın) <br>
+
+                                    Yaz adres, onlar bilir <br>
+                                    Mənlə eyni deyil ‘’rank’’ın <br>
+                                    Verin hamısın <br>
+
+                                    Şeytan deyir, yaz açıq, necə varsa <br>
+                                    Bütün üzlərini Bakı tanısın, eh <br>
+                                    Mənə tez <br>
+                                    Bu gün hesab günü çatır tası bankın <br>
+                                    Verin hamısın <br>
+
+                                    Alınırsa, adamlığı qoruyun <br>
+                                    Gedin özünüzü dolayın <br>
+                                    Bil ki, mənlə bu yolların sonu yox <br>
+                                    Bəxtinizi bir də sınayın <br>
+
+                                    Adım özümə məxsus, var səbəbim <br>
+                                    Zirvələrə daşımışam sənəti <br>
+                                    Kimin nə haqqı var, bilib nədənin <br>
+                                    Qəpiyəcən əziyyətin ödədim <br>
+
+                                    Bax indi tələs, bax indi tələs <br>
+                                    Bu da yeni stil, bu da yeni tərz <br>
+                                    Sənlə oynamağa yoxumdur həvəs <br>
+                                    Salar yoxsa bütün qulaqlara səs <br>
+
+                                    İndi verin hamısın (sın) <br>
+                                    Mənə tez <br>
+                                    Bu hesab günü çatır tası bankın <br>
+                                    Verin hamısın (sın) <br>
+
+                                    Yaz adres, onlar bilir <br>
+                                    Mənlə eyni deyil ‘’rank’’ın <br>
+                                    Verin hamısın <br>
+
+                                    Şeytan deyir, yaz açıq, necə varsa <br>
+                                    Bütün üzlərini Bakı tanısın, eh <br>
+                                    Mənə tez <br>
+                                    Bu gün hesab günü çatır tası bankın <br>
+                                    Verin hamısın <br>
+
+                                    (Verin, vеrin) <br>
+                                    (Alınırsa, adamlığı qoruyun) <br>
+                                    (Hamısın, hamısın) <br>
+                                    (Gedin özünüzü dolayın) <br>
+                                    (Verin hamısın) <br>
+                                    (Verin hamısın) <br>
+                                    <br>
+                                    (Vеrin hamısın) <br>
+                                    (Verin hamısın) <br>
+                                    (Verin hamısın) <br>
+                                    (Verin hamısın) <br>
+                                </p>
+                            </details>
+                        </div>
+                    </div>
                     <div class="song-container">
                         <div class="song-details">
                             <img src="./assets/imgs/esq limani.jpg" alt="">

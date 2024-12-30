@@ -26,6 +26,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script defer src="../js/musicApp.js"></script>
+    <script defer src="../js/drop.js"></script>
     <!-- <script src="./assets/json/songs.json"></script> -->
     <!-- <script defer src="./assets/js/two.js"></script> -->
     <script defer src="../js/three.js"></script>
@@ -34,7 +35,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body style="background-color: #0a2e52;">
+<body style="background-color: #405060;">
     <header class="site-header">
         <div class="container">
             <div class="wrapper site-header__wrapper">
@@ -56,28 +57,29 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 style="background-color: transparent; border: 0 solid #020316; padding-top: 17px; box-shadow: none;">
                                 Sosial Şəbəkələr və Musiqi Platformaları </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-left: 70px; animation: slideIn 1s forwards;">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dropdownMenu"
+                                style="width: 350px;">
                                 <a class="dropdown-item"
-                                    href="https://www.instagram.com/thisishiss?igsh=cTV6cTFkMWlqajQ3"
-                                    style="display:flex;align-items: center; justify-content: center;">
-                                    <img src="../imgs/instagram.jpg" style="width: 170px;" alt="">
+                                    href="https://www.instagram.com/thisishiss?igsh=cTV6cTFkMWlqajQ3">
+                                    <img src="https://www.citypng.com/public/uploads/preview/square-instagram-logo-photos-social-media-701751694793082uj6ej5fkfx.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
-                                <a class="dropdown-item" href="https://www.tiktok.com/@realhiss?_t=8p43VlvzHNs&_r=1"
-                                    style="display:flex;gap: 10px;align-items: center;">
-                                    <img src="../imgs/tiktok.jpg" style="width: 170px;" alt="">
+                                <a class="dropdown-item" href="https://www.tiktok.com/@realhiss?_t=8p43VlvzHNs&_r=1">
+                                    <img src="https://img.freepik.com/premium-vector/set-tiktok-app-icons-social-media-logo-vector-illustration_277909-592.jpg"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
-                                <a class="dropdown-item" href="https://youtube.com/@thisishiss?si=Lc1-DKaREx4qS98K"
-                                    style="display:flex;gap: 10px;align-items: center;">
-                                    <img src="../imgs/youtube.jpg" style="width: 170px;" alt="">
+                                <a class="dropdown-item" href="https://youtube.com/@thisishiss?si=Lc1-DKaREx4qS98K">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
                                 <a class="dropdown-item"
-                                    href="https://open.spotify.com/artist/3G5xL8UA1bD6a2i4o1AvwF?si=3HCsO_zmRVqUXcYNk7bN5g"
-                                    style="display:flex;align-items: center;">
-                                    <img src="../imgs/spotify.jpg" style="width: 170px;" alt="">
+                                    href="https://open.spotify.com/artist/3G5xL8UA1bD6a2i4o1AvwF?si=3HCsO_zmRVqUXcYNk7bN5g">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/480px-Spotify_logo_without_text.svg.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
-                                <a class="dropdown-item" href="https://music.apple.com/az/artist/hiss/1485654111"
-                                    style="display:flex;align-items: center;">
-                                    <img src="../imgs/apple-music.jpg" style="width: 170px;padding-left: 5px;" alt="">
+                                <a class="dropdown-item" href="https://music.apple.com/az/artist/hiss/1485654111">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/0/747.png"
+                                        style="width: 40px; border-radius: 0;" alt="">
                                 </a>
                             </div>
                         </div>
@@ -99,6 +101,7 @@
                         <i class="fa-solid fa-pause pause-icon" style="display: none;"></i>
                     </button>
                     <div class="slider__content">
+                        <img src="../imgs-3/36749aa2abbc4609162afbbea6898f6a.1000x1000x1.jpg" alt="">
                         <img class="img slider__img" src="../imgs/esq limani.jpg" alt="">
                         <img class="img slider__img" src="https://i.ytimg.com/vi/-KyJaZ-Bv8A/maxresdefault.jpg" alt="">
                         <img class="img slider__img"
@@ -199,6 +202,17 @@
                 </div>
             </div>
             <ul class="player__playlist list">
+                <li class="player__song">
+                    <img class="player__img img" src="../imgs-3/36749aa2abbc4609162afbbea6898f6a.1000x1000x1.jpg" alt="">
+                    <p class="player__context">
+                        <b class="player__song-name">Bakı tanısın</b>
+                        <span class="flex">
+                            <span class="player__title">Hiss</span>
+                            <span class="player__song-time"></span>
+                        </span>
+                    </p>
+                    <audio class="audio" src="../mp3/baki_tanisin.mp4"></audio>
+                </li>
                 <li class="player__song">
                     <img class="player__img img" src="../imgs/esq limani.jpg" alt="">
                     <p class="player__context">

@@ -165,6 +165,10 @@ header a {
     color: #999;
 }
 
+.dropdown-menu {
+    display: none;
+}
+
 /* 
 .imgs-words {
     display: flex;

@@ -1,4 +1,6 @@
 const videos = [
+    { title: "Bakı tanısın", src: "../hiss-klips-videos/Hiss — Bakı Tanısın .mp4" },
+    { title: "Esq limanı", src: "../hiss-klips-videos/Hiss — Eşq Limanı (Lyrics Video).mp4" },
     { title: "Best", src: "../hiss-klips-videos/Best-klip.mp4" },
     { title: "Kədərli bölüm", src: "../hiss-klips-videos/kederli-bolum.mp4" },
     { title: "Dilək", src: "../hiss-klips-videos/dilek.mp4" },
