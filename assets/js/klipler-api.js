@@ -1,4 +1,11 @@
 const videos = [
+    { title: "Heç Nə", src: "../hiss-klips-videos/Hiss - Heç Nə.mp4" },
+    { title: "Deyilənlər", src: "../hiss-klips-videos/Ayaz Babayev x Hiss  Deyilənlər (Rəsmi Musiqi Videosu).mp4" },
+    { title: "Gün Gələr", src: "../hiss-klips-videos/Hiss x RZZA  Gün Gələr.mp4" },
+    { title: "Sınıq Pəncərə", src: "../hiss-klips-videos/Hiss, Rafo, Elçin Cəfərov Sınıq Pəncərə.mp4" },
+    { title: "Sevə-sevə", src: "../hiss-klips-videos/Hiss  Sevə-Sevə.mp4" },
+    { title: "Canın Sağ Olsun", src: "../hiss-klips-videos/Hiss  Canın Sağ Olsun.mp4" },
+    { title: "Kim qalacaq?", src: "../hiss-klips-videos/Hiss x Jeyhun Samedov - Kim qalacaq.mp4" },
     { title: "Bakı tanısın", src: "../hiss-klips-videos/Hiss — Bakı Tanısın .mp4" },
     { title: "Esq limanı", src: "../hiss-klips-videos/Hiss — Eşq Limanı (Lyrics Video).mp4" },
     { title: "Best", src: "../hiss-klips-videos/Best-klip.mp4" },
