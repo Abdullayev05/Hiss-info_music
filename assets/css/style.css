@@ -170,58 +170,93 @@ header a {
 }
 
 .dropdown .dropdown-menu {
-  transform-origin: top center; 
-  will-change: transform, opacity;
-  transition: transform 260ms cubic-bezier(.2,.9,.3,1), opacity 260ms ease;
-  opacity: 0;
-  transform: translateY(-8px) scale(.98);
-  pointer-events: none; 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12); 
-  border-radius: 12px;
-  overflow: hidden;
+    transform-origin: top center;
+    will-change: transform, opacity;
+    transition: transform 260ms cubic-bezier(.2, .9, .3, 1), opacity 260ms ease;
+    opacity: 0;
+    transform: translateY(-8px) scale(.98);
+    pointer-events: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .dropdown.show .dropdown-menu,
 .dropdown-menu.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
 }
 
 .dropdown .dropdown-item {
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: transform 220ms cubic-bezier(.2,.9,.3,1), opacity 220ms ease;
-  transition-delay: 0s;
-  padding: 10px 12px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: transform 220ms cubic-bezier(.2, .9, .3, 1), opacity 220ms ease;
+    transition-delay: 0s;
+    padding: 10px 12px;
 }
 
-.dropdown.show .dropdown-item:nth-child(1) { transition-delay: 0.03s; opacity: 1; transform: translateX(0); }
-.dropdown.show .dropdown-item:nth-child(2) { transition-delay: 0.06s; opacity: 1; transform: translateX(0); }
-.dropdown.show .dropdown-item:nth-child(3) { transition-delay: 0.09s; opacity: 1; transform: translateX(0); }
-.dropdown.show .dropdown-item:nth-child(4) { transition-delay: 0.12s; opacity: 1; transform: translateX(0); }
-.dropdown.show .dropdown-item:nth-child(5) { transition-delay: 0.15s; opacity: 1; transform: translateX(0); }
-.dropdown.show .dropdown-item:nth-child(6) { transition-delay: 0.18s; opacity: 1; transform: translateX(0); }
+.dropdown.show .dropdown-item:nth-child(1) {
+    transition-delay: 0.03s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dropdown.show .dropdown-item:nth-child(2) {
+    transition-delay: 0.06s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dropdown.show .dropdown-item:nth-child(3) {
+    transition-delay: 0.09s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dropdown.show .dropdown-item:nth-child(4) {
+    transition-delay: 0.12s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dropdown.show .dropdown-item:nth-child(5) {
+    transition-delay: 0.15s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dropdown.show .dropdown-item:nth-child(6) {
+    transition-delay: 0.18s;
+    opacity: 1;
+    transform: translateX(0);
+}
 
 .dropdown .dropdown-item:hover,
 .dropdown .dropdown-item:focus {
-  transform: translateX(4px);
-  background-color: rgba(0,0,0,0.03);
+    transform: translateX(4px);
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 @media (max-width: 576px) {
-  .dropdown .dropdown-menu { width: calc(100vw - 32px) !important; left: 16px !important; right: 16px !important; }
+    .dropdown .dropdown-menu {
+        width: calc(100vw - 32px) !important;
+        left: 16px !important;
+        right: 16px !important;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dropdown .dropdown-menu,
-  .dropdown .dropdown-item {
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-    pointer-events: auto;
-  }
+
+    .dropdown .dropdown-menu,
+    .dropdown .dropdown-item {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto;
+    }
 }
+
 /* 
 .imgs-words {
     display: flex;
@@ -310,12 +345,17 @@ header a {
 }
 
 @media (max-width: 599px) {
+    .site-header__wrapper a img {
+        position: relative;
+        z-index: 20;
+    }
+
     .nav__wrapper {
         position: absolute;
         top: 0.1px;
         right: 0;
         left: 0;
-        z-index: -1;
+        z-index: 10;
         text-align: center;
         padding-top: 40px;
         background-color: #020316;
@@ -330,6 +370,8 @@ header a {
         opacity: 1;
         transform: translateY(0);
     }
+
+
 }
 
 @media (max-width: 599px) {
@@ -466,6 +508,10 @@ header a {
 
     }
 
+    #dropdownMenu {
+        margin-right: 27px;
+    }
+
     .hiss-best h1::after {
         content: '"BEST"';
         font-size: 55px;
@@ -537,6 +583,10 @@ header a {
 @media (max-width: 425px) {
     .site-header {
         width: 100%;
+    }
+
+    #dropdownMenu {
+        margin-right: 27px;
     }
 }
 

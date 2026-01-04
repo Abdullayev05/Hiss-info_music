@@ -1,4 +1,5 @@
 const videos = [
+    { title: "XT", src: "../hiss-klips-videos/Hiss  XT.mp4" },
     { title: "Başqa adamlar", src: "../hiss-klips-videos/Hiss  Başqa Adamlar (Visualizer).mp4" },
     { title: "Heç Nə", src: "../hiss-klips-videos/Hiss - Heç Nə.mp4" },
     { title: "Deyilənlər", src: "../hiss-klips-videos/Ayaz Babayev x Hiss  Deyilənlər (Rəsmi Musiqi Videosu).mp4" },
