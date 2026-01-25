@@ -162,7 +162,7 @@ header a {
 
     .nav__wrapper {
         position: absolute;
-        top: 0.1px;
+        top: -20px;
         right: 0;
         left: 0;
         z-index: 10;
@@ -212,6 +212,11 @@ header a {
         margin-right: 27px;
     }
 
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
 }
 
 @media (min-width: 376px) and (max-width: 425px) {}
@@ -223,6 +228,12 @@ header a {
 
     #dropdownMenu {
         margin-right: 27px;
+    }
+
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
     }
 }
 

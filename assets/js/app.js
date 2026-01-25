@@ -1,15 +1,24 @@
 let navToggle = document.querySelector(".nav__toggle");
 let navWrapper = document.querySelector(".nav__wrapper");
+let icon = navToggle.querySelector("i");
 
 navToggle.addEventListener("click", function () {
   if (navWrapper.classList.contains("active")) {
+    navWrapper.classList.remove("active");
+
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+
     this.setAttribute("aria-expanded", "false");
     this.setAttribute("aria-label", "menu");
-    navWrapper.classList.remove("active");
   } else {
     navWrapper.classList.add("active");
-    this.setAttribute("aria-label", "close menu");
+
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+
     this.setAttribute("aria-expanded", "true");
+    this.setAttribute("aria-label", "close menu");
   }
 });
 

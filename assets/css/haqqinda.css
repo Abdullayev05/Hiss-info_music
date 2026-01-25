@@ -249,7 +249,7 @@ section {
 
     .nav__wrapper {
         position: absolute;
-        top: 0.1px;
+        top: -20px;
         right: 0;
         left: 0;
         z-index: 10;
@@ -315,6 +315,13 @@ section {
         font-size: 20px;
         padding-top: 15px;
     }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
 }
 
 .info-hiss img {
@@ -338,6 +345,12 @@ section {
         margin-right: 27px;
     }
 
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
 }
 
 @media (min-width: 376px) and (max-width: 425px) {}
@@ -350,6 +363,13 @@ section {
 
     #dropdownMenu {
         margin-right: 27px;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
     }
 }
 

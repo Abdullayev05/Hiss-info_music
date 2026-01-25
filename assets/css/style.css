@@ -352,7 +352,7 @@ header a {
 
     .nav__wrapper {
         position: absolute;
-        top: 0.1px;
+        top: -20px;
         right: 0;
         left: 0;
         z-index: 10;
@@ -458,6 +458,13 @@ header a {
         font-size: 20px;
         padding-top: 15px;
     }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
@@ -475,6 +482,13 @@ header a {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
     }
 }
 
@@ -525,6 +539,13 @@ header a {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
     }
 }
 
@@ -578,6 +599,19 @@ header a {
         flex-direction: column;
         justify-content: center;
     }
+
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
 }
 
 @media (max-width: 425px) {
@@ -599,6 +633,12 @@ header a {
     /* #two_section{
         top: 400px;
     } */
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
@@ -641,6 +681,7 @@ header a {
     .site-header {
         width: 100%;
     }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

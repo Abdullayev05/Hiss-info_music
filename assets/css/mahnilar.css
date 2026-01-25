@@ -543,7 +543,7 @@ img[alt="pause-icon"] {
 
     .nav__wrapper {
         position: absolute;
-        top: 0.1px;
+        top: -20px;
         right: 0;
         left: 0;
         z-index: 10;
@@ -614,6 +614,12 @@ img[alt="pause-icon"] {
         padding-top: 15px;
     }
 
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
     /* .player {
         width: 17.15em;
         display: flex;
@@ -637,6 +643,12 @@ img[alt="pause-icon"] {
         margin-right: 27px;
     }
 
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
 }
 
 @media (min-width: 376px) and (max-width: 425px) {}
@@ -648,6 +660,12 @@ img[alt="pause-icon"] {
 
     #dropdownMenu {
         margin-right: 27px;
+    }
+
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
     }
 }
 
