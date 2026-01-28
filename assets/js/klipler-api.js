@@ -32,17 +32,28 @@ const videos = [
     { title: "Kəpənəklər", src: "../hiss-klips-videos/kepenekler.mp4" }
 ];
 
-const videoContainer = document.getElementById('videoContainer');
-videos.forEach(video => {
-    const videoElement = document.createElement('div');
-    videoElement.className = 'video-name';
+const videoContainer = document.getElementById("videoContainer");
 
-    const title = document.createElement('h3');
+let currentPlayingVideo = null; // 🔥 hazırda oxuyan video
+
+videos.forEach(video => {
+    const videoElement = document.createElement("div");
+    videoElement.className = "video-name";
+
+    const title = document.createElement("h3");
     title.textContent = video.title;
 
-    const videoTag = document.createElement('video');
+    const videoTag = document.createElement("video");
     videoTag.src = video.src;
     videoTag.controls = true;
+
+    // ⭐ əsas hissə
+    videoTag.addEventListener("play", () => {
+        if (currentPlayingVideo && currentPlayingVideo !== videoTag) {
+            currentPlayingVideo.pause();
+        }
+        currentPlayingVideo = videoTag;
+    });
 
     videoElement.appendChild(title);
     videoElement.appendChild(videoTag);
