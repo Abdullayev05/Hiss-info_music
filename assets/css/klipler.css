@@ -67,6 +67,46 @@ section {
     flex: 4;
 }
 
+
+#videoContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: start; /* 🔥 əsas açar budur */
+    padding: 20px;
+}
+
+.video-name {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.video-name:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+}
+
+.video-name h3 {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.video-name video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
 @keyframes slideIn {
     0% {
         opacity: 0;
