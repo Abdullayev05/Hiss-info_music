@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 70px;
+    border-radius: 20px;
+}
+
+header a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.site-header__wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav__item a {
+    display: block;
+    padding: 1rem 1.1rem;
+}
+
+.nav__toggle {
+    display: none;
+}
+
+section {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-name {
+    margin-top: 20px;
+}
+
+.videos video {
+    width: 270px;
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: contain;
+    flex: 4;
+}
+
+
+#videoContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: start; /* 🔥 əsas açar budur */
+    padding: 20px;
+}
+
+.video-name {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.video-name:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+}
+
+.video-name h3 {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.video-name video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(0) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale();
+    }
+}
+
+
+/* footer start */
+.footer {
+    /* background-color: #333; */
+    /* color: #fff; */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #020316;
+    margin-top: 100px;
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #f0f2f3;
+    transition: box-shadow 0.3s ease;
+}
+
+.sosial-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.sosial-media i {
+    color: #020316;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* .nav__wrapper a {
+    color: #020316;
+} */
+
+/* footer end */
+
+
+
+
+
+@media (min-width: 600px) {
+    .site-header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .nav__wrapper {
+        display: flex;
+    }
+}
+
+@media (max-width: 599px) {
+    .site-header__wrapper a img {
+        position: relative;
+        z-index: 20;
+    }
+
+    .nav__wrapper {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        text-align: center;
+        padding-top: 40px;
+        background-color: #020316;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    .nav__wrapper.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 599px) {
+    .nav__toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        color: aliceblue;
+    }
+}
+
+@media (max-width: 320px) {
+    .site-header {
+        width: 100%;
+        display: flex;
+    }
+
+    .videos video {
+        width: 290px;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+
+    .footer span {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: #f0f2f3;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .sosial-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 30px;
+    }
+
+    .sosial-media i {
+        color: #020316;
+        font-size: 20px;
+        padding-top: 15px;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .videos video {
+        width: 290px;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
+}
+
+@media (max-width: 375px) {
+    .site-header {
+        width: 100%;
+    }
+
+    .videos video {
+        width: 290px;
+    }
+
+    #dropdownMenu {
+        margin-right: 27px;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .videos video {
+        width: 290px;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
+}
+
+@media (max-width: 425px) {
+    .site-header {
+        width: 100%;
+        display: flex;
+    }
+
+    .videos video {
+        width: 290px;
+    }
+
+    #dropdownMenu {
+        margin-right: 27px;
+    }
+
+    .nav__toggle {
+        display: block;
+        /* və ya flex */
+        cursor: pointer;
+        z-index: 1001;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .videos video {
+        width: 500px;
+        border-radius: 15px;
+        overflow: hidden;
+        object-fit: contain;
+        flex: 4;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        width: 100%;
+    }
+
+}
