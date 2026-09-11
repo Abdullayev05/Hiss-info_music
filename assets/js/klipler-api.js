@@ -33,29 +33,49 @@ const videos = [
 ];
 
 const videoContainer = document.getElementById("videoContainer");
+let currentPlayingVideo = null;
 
-let currentPlayingVideo = null; // 🔥 hazırda oxuyan video
+if (videoContainer) {
+    videos.forEach(video => {
+        const videoElement = document.createElement("div");
+        videoElement.className = "video-name";
 
-videos.forEach(video => {
-    const videoElement = document.createElement("div");
-    videoElement.className = "video-name";
+        const title = document.createElement("h3");
+        title.textContent = video.title;
 
-    const title = document.createElement("h3");
-    title.textContent = video.title;
+        const videoTag = document.createElement("video");
+        videoTag.src = video.src;
+        videoTag.controls = true;
 
-    const videoTag = document.createElement("video");
-    videoTag.src = video.src;
-    videoTag.controls = true;
+        videoTag.addEventListener("play", () => {
+            if (currentPlayingVideo && currentPlayingVideo !== videoTag) {
+                currentPlayingVideo.pause();
+            }
+            currentPlayingVideo = videoTag;
+        });
 
-    // ⭐ əsas hissə
-    videoTag.addEventListener("play", () => {
-        if (currentPlayingVideo && currentPlayingVideo !== videoTag) {
+        videoElement.appendChild(title);
+        videoElement.appendChild(videoTag);
+        videoContainer.appendChild(videoElement);
+    });
+}
+
+document.addEventListener("play", (event) => {
+    const target = event.target;
+    if (target.tagName === "VIDEO") {
+        if (currentPlayingVideo && currentPlayingVideo !== target) {
             currentPlayingVideo.pause();
         }
-        currentPlayingVideo = videoTag;
-    });
+        currentPlayingVideo = target;
+    }
+}, true);
 
-    videoElement.appendChild(title);
-    videoElement.appendChild(videoTag);
-    videoContainer.appendChild(videoElement);
+// Swiper ayarları
+const swiper = new Swiper(".video-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });

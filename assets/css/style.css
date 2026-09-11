@@ -498,8 +498,40 @@ header a {
     border-radius: 12px;
 }
 
+.swiper-slide {
+    position: relative;
+}
+
+/* Videonun üzərinə gələn şəffaf sürüşdürmə qatı */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px); /* Pleyerin idarəetmə panelini açıq saxlayır ki, düymələrə basılsın */
+    z-index: 2;
+    cursor: grab;
+}
+
+.swiper-slide video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
 
 
+
+
+/* albom start */
+
+
+
+
+
+
+/* albom finish */
 
 @media (max-width: 576px) {
     .dropdown .dropdown-menu {
