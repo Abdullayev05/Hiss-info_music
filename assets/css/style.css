@@ -501,8 +501,6 @@ header a {
 
 
 
-
-
 @media (max-width: 576px) {
     .dropdown .dropdown-menu {
         width: calc(100vw - 32px) !important;
