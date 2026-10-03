@@ -33,40 +33,34 @@ const videos = [
     { title: "Kəpənəklər", src: "../hiss-klips-videos/kepenekler.mp4" }
 ];
 
-const videoContainer = document.querySelector(".video-swiper .swiper-wrapper");
+const videoContainer = document.getElementById("videoContainer");
 let currentPlayingVideo = null;
 
-// 2. Videoların dinamik olaraq HTML-ə yerləşdirilməsi
 if (videoContainer) {
     videos.forEach(video => {
-        const slide = document.createElement("div");
-        slide.className = "swiper-slide clip-card";
+        const videoElement = document.createElement("div");
+        videoElement.className = "video-name";
 
-        const thumb = document.createElement("div");
-        thumb.className = "clip-thumb";
+        const title = document.createElement("h3");
+        title.textContent = video.title;
 
         const videoTag = document.createElement("video");
         videoTag.src = video.src;
         videoTag.controls = true;
-        videoTag.preload = "metadata";
-        // Swiper-in bu element üzərində toxunmanı tutub saxlamaması üçün:
-        videoTag.classList.add("swiper-no-swiping");
 
-        const info = document.createElement("div");
-        info.className = "clip-info";
+        videoTag.addEventListener("play", () => {
+            if (currentPlayingVideo && currentPlayingVideo !== videoTag) {
+                currentPlayingVideo.pause();
+            }
+            currentPlayingVideo = videoTag;
+        });
 
-        const title = document.createElement("h4");
-        title.textContent = video.title;
-
-        info.appendChild(title);
-        thumb.appendChild(videoTag);
-        slide.appendChild(thumb);
-        slide.appendChild(info);
-        videoContainer.appendChild(slide);
+        videoElement.appendChild(title);
+        videoElement.appendChild(videoTag);
+        videoContainer.appendChild(videoElement);
     });
 }
 
-// 3. Eyni anda yalnız bir videonun oxunması üçün qlobal dinləyici
 document.addEventListener("play", (event) => {
     const target = event.target;
     if (target.tagName === "VIDEO") {
@@ -77,10 +71,12 @@ document.addEventListener("play", (event) => {
     }
 }, true);
 
-// 4. Swiper ayarları
+// Swiper ayarları
 const swiper = new Swiper(".video-swiper", {
     slidesPerView: "auto",
     spaceBetween: 20,
-    noSwiping: true,
-    noSwipingSelector: 'video, video controls, .clip-card video',
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });
