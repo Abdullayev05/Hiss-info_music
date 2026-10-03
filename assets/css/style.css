@@ -1187,6 +1187,7 @@ header a {
     display: flex;
     flex-direction: column;
     position: relative;
+    touch-action: pan-y;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1209,7 +1210,7 @@ header a {
     width: 100%;
     height: calc(100% - 60px);
     z-index: 2;
-    cursor: grab;
+    pointer-events: none;
 }
 
 .clip-thumb {
@@ -1255,12 +1256,50 @@ header a {
 
 /* albom start */
 
+.section_5 {
+    background-color: #0c0d10; /* Şəkildəki qara fon rəngi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* İstəyə görə hündürlüyü dəyişə bilərsiniz */
+    font-family: sans-serif;
+}
 
+.section_5 h2 {
+    color: #ffffff;
+    font-size: 42px; /* Şəkildəki yazı ölçüsünə uyğunlaşdırılıb */
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0;
+}
 
 
 
 
 /* albom finish */
+
+/* akustikler start */
+
+.section_6 {
+    background-color: #0c0d10; /* Şəkildəki qara fon rəngi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* İstəyə görə hündürlüyü dəyişə bilərsiniz */
+    font-family: sans-serif;
+}
+
+.section_6 h2 {
+    color: #ffffff;
+    font-size: 42px; /* Şəkildəki yazı ölçüsünə uyğunlaşdırılıb */
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+
+
+/* akustikler end */
 
 
 

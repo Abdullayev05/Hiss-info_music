@@ -72,11 +72,14 @@ document.addEventListener("play", (event) => {
 }, true);
 
 // Swiper ayarları
-const swiper = new Swiper(".video-swiper", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
+// const swiper = new Swiper(".video-swiper", {
+//     slidesPerView: "auto",
+//     spaceBetween: 20,
+//     touchStartPreventDefault: false,
+//     simulateTouch: true,
+//     allowTouchMove: true,
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//     },
+// });
