@@ -1350,12 +1350,12 @@ header a {
         height: 450px;
     }
 
-    .hero-section {
+    /* .hero-section {
         min-height: 280vh;
         display: flex;
         align-items: center;
         background-color: #f8f9fa;
-    }
+    } */
 
     .section_2 .container {
         flex-direction: column !important;
