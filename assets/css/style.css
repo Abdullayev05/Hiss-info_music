@@ -10,21 +10,24 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-.container {
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.custom-container {
     width: 80%;
     margin: 0 auto;
 }
 
 /* header start*/
-
 header {
     position: fixed;
     width: 100%;
     padding-top: 20px;
-    /* top: 20px; */
     left: 0;
     z-index: 1000;
-    /* background-color: #040d8a77; */
 }
 
 header img {
@@ -59,23 +62,14 @@ header a {
 
     100% {
         opacity: 1;
-        transform: translateX(0) scale();
+        transform: translateX(0) scale(1);
     }
 }
-
-
-
-/* header end */
-
-
-/* # one section start */
-
 
 .all_best_img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: absolute; */
     z-index: -1;
     right: 0;
     gap: 15px;
@@ -102,11 +96,78 @@ header a {
     height: 70vh;
 }
 
+.hero-section {
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.hero-title-box h1 {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.2;
+}
+
+.highlight-best {
+    color: #4149b9;
+    position: relative;
+}
+
+/* Swiper Oxlarının Rəngini Dəyişmək Üçün */
+.heroSwiper .swiper-button-next,
+.heroSwiper .swiper-button-prev {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.heroSwiper .swiper-button-next:hover,
+.heroSwiper .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.heroSwiper .swiper-button-next::after,
+.heroSwiper .swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+    background: #4149b9;
+}
+
+.heroSwiper {
+    width: 100% !important;
+    height: 450px !important;
+    overflow: hidden !important;
+    border-radius: 1rem !important;
+}
+
+.heroSwiper .swiper-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.heroSwiper .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.heroSwiper .swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    /* Kənarlarda heç bir boşluq və ya qara fon saxlamır, tam doldurur */
+    display: block !important;
+}
+
 /* # one section end */
 
 
 /* # two section start */
-
 
 #two_section {
     position: relative;
@@ -120,10 +181,6 @@ header a {
     gap: 30px;
     margin-top: 50px;
 }
-
-/* details[open] {
-    display: block;
-} */
 
 .song-container {
     background-color: #f5dbdb;
@@ -148,7 +205,7 @@ header a {
     border-radius: 10px;
 }
 
-.song-title {
+.song-container .song-title {
     font-size: 24px;
     margin: 20px 0 10px;
     color: #333;
@@ -239,214 +296,660 @@ header a {
 }
 
 
-.section_4,
-.section_2,
-.section_3 {
-    padding-top: 100px;
-    text-align: center;
+/* mahnilar / slayder section */
+
+.section_2 {
+    padding: 80px 0;
+    background-color: #0b0d10;
+    text-align: left;
 }
 
-.section_2 h2 {
-    /* font-size: 22px; */
-    text-align: center;
+.section_2 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex !important;
+    /* Mütləq tətbiq olunması üçün */
+    flex-direction: row !important;
+    /* Yan-yana olması üçün */
+    align-items: flex-start;
+    gap: 40px;
 }
 
-/* SONGS */
-.swiper-wrapper {
-    display: flex;
-    padding-top: 100px;
-}
-
-.song-card {
-    background: linear-gradient(180deg, #1e1e1e, #161616);
-    border-radius: 20px;
-    padding: 15px;
+.songs-left-header {
+    flex: 0 0 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    /* Şaquli olaraq ortada saxlayır */
+    gap: 15px !important;
+    /* Başlıqla düyməni bir-birinə yaxınlaşdırır */
+    text-align: left !important;
+}
+
+.songs-left-header h2,
+.songs-left-header p {
+    text-align: left !important;
+}
+
+.card_word {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Digər mətn stillərin eyni qala bilər */
+.songs-left-header h2 {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 !important;
+}
+
+.songs-left-header p {
+    display: none;
+    /* Əgər paraqraf yoxdursa və ya istifadə etmirsinizsə */
+}
+
+.btn-outline {
+    display: inline-flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 1px solid rgba(229, 9, 20, 0.6);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.song-card img {
-    width: 100%;
-    border-radius: 14px;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-
-    transition: transform 0.4s ease, opacity 0.4s ease;
+.btn-outline:hover {
+    background-color: #e50914;
+    border-color: #e50914;
 }
 
-.song-card:hover img {
-    transform: scale(1.05);
+.songs-left-header .btn-outline {
+    margin-top: 0 !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    margin: 0 !important;
 }
 
-.song-card span {
-    display: block;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.gallery-left-header .btn-outline {
+    margin-right: auto !important;
+    margin-left: 0 !important;
 }
 
-.song-card span {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    margin: 12px 0 10px;
-    text-align: center;
-    letter-spacing: 0.3px;
-    opacity: 0.95;
+.clips-header-wrapper .btn-outline {
+    margin-right: auto !important;
+    margin-left: 0 !important;
 }
 
-.song-card button {
-    background: #2ecc71;
-    border: none;
-    border-radius: 50%;
-    padding: 10px 14px;
-    color: #000;
-    font-size: 16px;
+.card_word {
+    flex: 1;
+    min-width: 0;
 }
 
 .songs-swiper {
     width: 100%;
+    overflow: hidden;
 }
 
-.song-card button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.end-slide {
-    min-width: 140px;
+.swiper-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start !important;
 }
 
-.end-content {
-    height: 100%;
-    width: 100%;
-    padding: 20px 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 14px;
-
-    border-left: 2px dashed rgba(255, 255, 255, .2);
-}
-
-.end-content p {
-    color: rgba(255, 255, 255, .7);
-    font-size: 13px;
-    line-height: 1.3;
-}
-
-.end-content a {
-    color: #2a2b2a;
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.end-content a:hover {
-    text-decoration: underline;
-}
-
-.btn-outline {
-    display: block;
-    margin: 25px auto 0;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
-    text-decoration: none;
-    width: fit-content;
-}
-
-.play-button {
+/* Kartların səhifə boyu uzanmasının qarşısını alan düzgün ölçü bloku */
+.song-card {
     position: relative;
-    width: 60px;
-    height: 60px;
-    background: #282828;
+    background: #14171f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    width: 230px !important;
+    min-width: 230px !important;
+    max-width: 230px !important;
+    flex: 0 0 230px !important;
+    height: 330px !important;
+    /* Şəklin uzunsov görünməsi üçün sabit hündürlük */
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.song-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.song-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, #14171f 10%, rgba(20, 23, 31, 0.7) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.song-card span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 40px);
+}
+
+.song-card span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 40px);
+    /* Kənara çıxmaması üçün */
+}
+
+/* Play düyməsinin mövqeyi və stili */
+.song-card .play-button {
+    position: absolute;
+    left: 15px;
+    bottom: 60px;
+    /* Mahnı adının düz üstündə */
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.playing .play-button {
-    animation: pulse 1.8s infinite;
+.song-card .play-button:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.85);
 }
 
-.main-icon {
-    color: #d1cfcf;
-    font-size: 18px;
-    z-index: 5;
+.song-card .main-icon {
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 3px;
+    z-index: 4;
 }
 
-.progress-ring {
+/* 
+.songs-left-header {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+.header-top-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag-line {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background-color: #e50914;
+}
+
+.songs-left-header .sub-title {
+    color: #e50914;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Böyük "Mahnılar" başlığı */
+.songs-left-header h2 {
+    color: #f5ebe0;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+/* Açıqlama mətni */
+.songs-left-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 1px solid rgba(229, 9, 20, 0.6);
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #e50914;
+    border-color: #e50914;
+}
+
+.btn-outline .arrow {
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.btn-outline:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Sizin kodunuzdakı Progress Ring (SVG) stili */
+.song-card .progress-ring {
     position: absolute;
-    inset: 0;
-    transform: rotate(-90deg);
+    top: -5px;
+    left: -5px;
+    z-index: 3;
     pointer-events: none;
+    transform: rotate(-90deg);
+    /* <--- Budur səbəbi və həlli */
 }
 
 .progress-ring__bg {
-    fill: none;
-    stroke: #444;
-    stroke-width: 3;
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 2;
 }
 
 .progress-ring__circle {
-    fill: none;
-    stroke: #addfbe;
-    stroke-width: 3;
-    stroke-linecap: round;
+    fill: transparent;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-dasharray: 132;
+    /* 2 * pi * 21 = ~132 */
+    stroke-dashoffset: 132;
     transition: stroke-dashoffset 0.1s linear;
 }
 
-.progress-ring,
-.progress-ring * {
+/* Şəkil qutusu */
+.card-image-box {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    /* Şəklin hündürlüyü (şəkildəki kimi uzunsov olması üçün) */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Şəklin üzərinə gələn qradiyent kölgə */
+.card-image-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(10, 12, 16, 0.95) 15%, rgba(10, 12, 16, 0.6) 60%, transparent 100%);
     pointer-events: none;
 }
 
-.progress-ring__circle {
-    stroke-dasharray: 138.23;
-    stroke-dashoffset: 138.23;
-    transition: stroke-dashoffset 0.1s linear;
+/* Play düyməsi */
+.play-button {
+    position: absolute;
+    left: 14px;
+    bottom: 90px;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.play-button:hover {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.main-icon {
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+/* Şəklin üzərindəki mətnlər */
+.card-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, #14171f 10%, rgba(20, 23, 31, 0.8) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card-overlay-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+.song-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.song-card .song-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.song-artist {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.song-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.song-duration {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.options-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px;
+    transition: color 0.2s;
+}
+
+.options-btn:hover {
+    color: #ffffff;
+}
+
+/* Responsiv ekranlar üçün */
+/* @media (max-width: 992px) {
+    .section_2 .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .songs-left-header {
+        flex: unset;
+        width: 100%;
+        text-align: center;
+    }
+    .btn-outline {
+        margin: 0 auto;
+    }
+} */
 
 
+
+/* ########################### */
 
 /* sekiller start */
+/* Ana Bölmə və Flex Yerləşdirmə */
+.section_3 {
+    padding: 60px 0;
+    width: 100%;
+    background-color: #0b0d10;
+    box-sizing: border-box;
+}
 
-.gallery-item {
+.gallery-container-flex {
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+/* Sol Tərəf Başlıq Bloku - Yazıların Tam Görünməsi Üçün */
+.gallery-left-header {
+    flex: 0 0 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 5;
+}
+
+.header-top-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.tag-line {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background-color: #e50914;
+}
+
+.gallery-left-header .sub-title {
+    color: #e50914 !important;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 1 !important;
+}
+
+.gallery-left-header .gallery-title {
+    color: #f5ebe0 !important;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.gallery-left-header .gallery-desc {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* "Bütün şəkillər" Düyməsi */
+.gallery-left-header .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 1px solid rgba(229, 9, 20, 0.8);
+    background-color: transparent;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: all 0.3s ease;
+}
+
+.gallery-left-header .btn-outline:hover {
+    background-color: #e50914;
+    border-color: #e50914;
+}
+
+.gallery-left-header .arrow {
+    font-size: 14px;
+    color: #ffffff !important;
+    transition: transform 0.2s ease;
+}
+
+.gallery-left-header .btn-outline:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Sağ Tərəf və Ox Düymələri */
+.gallery-right-content {
+    flex: 1;
+    min-width: 0;
     position: relative;
 }
 
+.gallery-nav-buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: -55px;
+    right: 0;
+    z-index: 10;
+}
+
+.gallery-prev,
+.gallery-next {
+    position: static !important;
+    width: 38px !important;
+    height: 38px !important;
+    background: #14171f !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: #e50914 !important;
+    border-color: #e50914 !important;
+}
+
+.gallery-prev::after,
+.gallery-next::after {
+    display: none !important;
+}
+
+/* Swiper və Slayd Dizaynı */
 .gallery-swiper {
     overflow: hidden;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.gallery-swiper .swiper-wrapper {
+    display: flex;
+    transition-timing-function: linear !important;
+    will-change: transform;
+}
+
+.gallery-swiper .swiper-slide {
+    width: 200px;
 }
 
 .gallery-item {
+    position: relative;
+    padding: 0;
+    border-radius: 14px;
     overflow: hidden;
+    background: #14171f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .gallery-item img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    border-radius: 20px;
+    display: block;
+    border-radius: 14px;
 }
 
 .gallery-item span {
@@ -457,71 +960,297 @@ header a {
     padding: 6px 10px;
     border-radius: 20px;
     font-size: 13px;
+    color: #ffffff;
 }
 
-.gallery-swiper .swiper-slide {
-    width: 160px;
-}
-
-.gallery-item {
-    padding: 0;
-}
-
-.gallery-item img {
-    border-radius: 8px;
-}
-
-.gallery-swiper .swiper-wrapper {
+/* Swiper Pagination Xətti */
+.gallery-pagination {
+    position: relative !important;
+    bottom: 0 !important;
     display: flex;
-    transition-timing-function: linear !important;
-    will-change: transform;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.gallery-pagination .swiper-pagination-bullet {
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+    transition: background 0.3s ease;
+}
+
+.gallery-pagination .swiper-pagination-bullet-active {
+    background: #e50914;
 }
 
 /* sekiller end */
 
 
 
+/* klipler start */
+
+.section_4 {
+    position: relative;
+    padding: 80px 0;
+    width: 100%;
+    background-color: #0b0d12;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arxa fondakı şəkil (keçid zamanı yumşaq fade effekti üçün transition əlavə olunub) */
+.clips-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.clips-bg-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    filter: blur(8px);
+    /* İstəsəniz blur effekti verə bilərsiniz, istəməsəniz silə bilərsiniz */
+    transform: scale(1.1);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.clips-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(11, 13, 18, 0.95) 20%, rgba(11, 13, 18, 0.75) 50%, rgba(11, 13, 18, 0.95) 100%),
+        linear-gradient(180deg, #0b0d12 0%, transparent 20%, transparent 80%, #0b0d12 100%);
+    z-index: 2;
+}
+
+.clips-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    /* Başlıq və videoları yan-yana qoyur */
+    align-items: center;
+    /* Şaquli olaraq mərkəzə salır */
+    gap: 40px;
+    /* Yazılarla videolar arasında məsafə */
+}
+
+.clips-header-wrapper {
+    position: relative;
+    text-align: left !important;
+    margin-bottom: 0;
+    flex: 0 0 220px;
+    /* Sol tərəfin sabit genişliyi */
+    /* max-width: 300px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+
+.clips-top-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.clips-header-wrapper .tag-line {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background-color: #e50914;
+}
+
+.clips-header-wrapper .sub-title {
+    color: #e50914;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.clips-header-wrapper .clips-title {
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.clips-header-wrapper .clips-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.clips-header-wrapper .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 26px;
+    border-radius: 30px;
+    border: 1px solid rgba(229, 9, 20, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.clips-header-wrapper .btn-outline:hover {
+    background-color: #e50914;
+    border-color: #e50914;
+}
+
+.clips-header-wrapper .arrow {
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.clips-header-wrapper .btn-outline:hover .arrow {
+    transform: translateX(4px);
+}
+
+.clips-nav-buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.video-prev,
+.video-next {
+    position: static !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(20, 23, 31, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.video-prev:hover,
+.video-next:hover {
+    background: #e50914 !important;
+    border-color: #e50914 !important;
+}
+
+.video-prev::after,
+.video-next::after {
+    display: none !important;
+}
+
+/* Swiper Slayder */
 .video-swiper {
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0 20px 0;
+    overflow: hidden;
 }
 
 .video-swiper .swiper-slide {
-    width: 320px;
-    /* video eni */
+    width: 310px;
     display: flex;
     justify-content: center;
 }
 
-.video-swiper video {
-    width: 300px;
-    border-radius: 12px;
-}
-
-.swiper-slide {
+.clip-card {
+    background: #14171f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Videonun üzərinə gələn şəffaf sürüşdürmə qatı */
+.clip-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.clip-card video {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
+}
+
 .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 50px); /* Pleyerin idarəetmə panelini açıq saxlayır ki, düymələrə basılsın */
+    height: calc(100% - 60px);
     z-index: 2;
     cursor: grab;
 }
 
-.swiper-slide video {
+.clip-thumb {
     width: 100%;
-    height: auto;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-swiper video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     position: relative;
     z-index: 1;
 }
 
+.clip-info {
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #14171f;
+}
 
+.clip-info h4 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clip-info span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+}
+
+/* klipler end */
 
 
 /* albom start */
@@ -533,24 +1262,7 @@ header a {
 
 /* albom finish */
 
-@media (max-width: 576px) {
-    .dropdown .dropdown-menu {
-        width: calc(100vw - 32px) !important;
-        left: 16px !important;
-        right: 16px !important;
-    }
-}
 
-@media (prefers-reduced-motion: reduce) {
-
-    .dropdown .dropdown-menu,
-    .dropdown .dropdown-item {
-        transition: none !important;
-        transform: none !important;
-        opacity: 1 !important;
-        pointer-events: auto;
-    }
-}
 
 /* 
 .imgs-words {
@@ -623,23 +1335,109 @@ header a {
 
 
 
-@media (min-width: 600px) {
-    .site-header__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 0;
-        padding-bottom: 0;
+/* --- 1. Ümumi / Mobil Üstünlüklər (Max-width: 599px və aşağısı) --- */
+@media (max-width: 480px) {
+
+    .swiper-slide,
+    .image-card {
+        width: 220px !important;
+        height: 320px !important;
     }
 }
 
-@media (min-width: 600px) {
-    .nav__wrapper {
+@media (max-width: 992px) {
+    .heroSwiper .swiper-slide img {
+        height: 450px;
+    }
+
+    .hero-section {
+        min-height: 280vh;
         display: flex;
+        align-items: center;
+        background-color: #f8f9fa;
+    }
+
+    .section_2 .container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .songs-left-header {
+        flex: unset !important;
+        max-width: 100% !important;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .songs-left-header .btn-outline {
+        margin: 0 auto;
+    }
+
+    .card_word {
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    .clips-container {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .clips-header-wrapper {
+        flex: unset !important;
+        max-width: 100% !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        margin-bottom: 30px;
+    }
+
+    .clips-header-wrapper h2,
+    .clips-header-wrapper p {
+        text-align: left !important;
+    }
+
+    /* Düyməni mərkəzdən çıxarıb sola uyğunlaşdırırıq */
+    .clips-header-wrapper .btn-outline {
+        margin: 0 !important;
+    }
+
+    /* Slayderin mobil ekranda ekranı daşmaması üçün */
+    .video-swiper {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .video-swiper .swiper-slide {
+        height: 250px !important;
+        /* Mobil üçün kart ölçüsünü bir az kiçildirik ki, səliqəli sığışsın */
+    }
+
+    .gallery-container-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .gallery-left-header {
+        flex: unset;
+        width: 100%;
+    }
+
+    .gallery-right-content {
+        width: 100%;
     }
 }
 
 @media (max-width: 599px) {
+    .site-header {
+        width: 100%;
+        display: flex;
+    }
+
+    header {
+        background-color: transparent;
+    }
+
     .site-header__wrapper a img {
         position: relative;
         z-index: 20;
@@ -666,55 +1464,25 @@ header a {
         transform: translateY(0);
     }
 
-
-}
-
-@media (max-width: 599px) {
     .nav__toggle {
         display: block;
         position: absolute;
         right: 1rem;
         top: 2rem;
         color: aliceblue;
-    }
-}
-
-@media (max-width: 320px) {
-
-    header {
-        background-color: transparent;
+        cursor: pointer;
+        z-index: 1001;
     }
 
-    .site-header {
-        width: 100%;
+    .all_best_img {
         display: flex;
+        justify-content: center;
     }
 
     .all_best_img img {
-        width: 320px;
+        width: 100%;
+        max-width: 100%;
         position: relative;
-    }
-
-    .hiss-best {
-        margin: 0 auto;
-        z-index: 999;
-        position: absolute;
-        display: none;
-    }
-
-    .hiss-best h1 {
-        text-align: left;
-        font-weight: 600;
-        color: #FFF5F4;
-        display: none;
-    }
-
-    .hiss-best h1::after {
-        content: '"BEST"';
-        text-align: left;
-        font-weight: 600;
-        color: #4149b9;
-        display: none;
     }
 
     .imgs-words {
@@ -754,203 +1522,68 @@ header a {
         padding-top: 15px;
     }
 
-    .nav__toggle {
-        display: block;
-        /* və ya flex */
-        cursor: pointer;
-        z-index: 1001;
-    }
 }
 
-@media (min-width: 321px) and (max-width: 375px) {
-    header {
-        background-color: transparent;
-    }
-
-    .all_best_img img {
-        width: 375px;
-        /* height: 100vh; */
-        position: relative;
-    }
-
-    .imgs-words {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nav__toggle {
-        display: block;
-        /* və ya flex */
-        cursor: pointer;
-        z-index: 1001;
-    }
-}
-
-@media (max-width: 375px) {
-    .site-header {
-        width: 100%;
-    }
-
-    .all_best_img {
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        /* align-items: ; */
-    }
-
-    .hiss-best {
-        /* margin: 0 auto; */
-        top: calc(50% + 20px);
-        z-index: 999;
-        position: absolute;
-        display: none;
-
-    }
-
-    .hiss-best h1 {
-        font-size: 55px;
-        text-align: left;
-        font-weight: 600;
-        color: #FFF5F4;
-        display: none;
-
+@media (max-width: 576px) {
+    .dropdown .dropdown-menu {
+        width: auto !important;
+        left: 16px !important;
+        right: 16px !important;
     }
 
     #dropdownMenu {
         margin-right: 27px;
     }
 
-    .hiss-best h1::after {
-        content: '"BEST"';
-        font-size: 55px;
-        text-align: left;
-        font-weight: 600;
-        color: #4149b9;
-        display: none;
-    }
+}
 
-    .imgs-words {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+@media (prefers-reduced-motion: reduce) {
 
-    .nav__toggle {
-        display: block;
-        /* və ya flex */
-        cursor: pointer;
-        z-index: 1001;
+    .dropdown .dropdown-menu,
+    .dropdown .dropdown-item {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto;
     }
 }
 
-@media (min-width: 376px) and (max-width: 425px) {
-    .all_best_img img {
-        width: 425px;
-        position: relative;
-    }
-
-    .all_best_img {
+@media (min-width: 600px) {
+    .site-header__wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
-    .hiss-best {
-        /* margin: 0 auto; */
-        top: calc(50% + 20px);
-        z-index: 999;
-        position: absolute;
-        display: none;
-
-    }
-
-    .hiss-best h1 {
-        font-size: 60px;
-        text-align: left;
-        font-weight: 600;
-        color: #FFF5F4;
-        display: none;
-
-    }
-
-    .hiss-best h1::after {
-        content: '"BEST"';
-        font-size: 60px;
-        text-align: left;
-        font-weight: 600;
-        color: #4149b9;
-        display: none;
-
-    }
-
-    .imgs-words {
+    .nav__wrapper {
         display: flex;
+    }
+
+    .section_2 .container {
         flex-direction: column;
-        justify-content: center;
+        gap: 30px;
     }
 
-    .imgs-words {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nav__toggle {
-        display: block;
-        cursor: pointer;
-        z-index: 1001;
-    }
-
-    .nav__toggle {
-        display: block;
-        /* və ya flex */
-        cursor: pointer;
-        z-index: 1001;
-    }
-}
-
-@media (max-width: 425px) {
-    .site-header {
+    .songs-left-header {
+        flex: unset;
         width: 100%;
+        text-align: center;
     }
 
-    #dropdownMenu {
-        margin-right: 27px;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 500px) {
-    .all_best_img img {
-        width: 500px;
-        position: relative;
-    }
-
-    /* #two_section{
-        top: 400px;
-    } */
-    .nav__toggle {
-        display: block;
-        /* və ya flex */
-        cursor: pointer;
-        z-index: 1001;
+    .btn-outline {
+        margin: 0 auto;
     }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
-    .all_best_img img {
-        width: 768px;
-        /* height: 100vh; */
-    }
-
     .all_best_img {
         display: flex;
         justify-content: center;
-        /* align-items: center; */
-        /* align-items: ; */
     }
 
     .hiss-best {
-        /* margin: 0 auto; */
         top: calc(50% + 20px);
         z-index: 999;
         position: absolute;
@@ -970,18 +1603,32 @@ header a {
         font-weight: 600;
         color: #4149b9;
     }
-}
 
-@media (max-width: 768px) {
-    .site-header {
-        width: 100%;
+    .images-container,
+    .gallery-container {
+        padding: 0 15px !important;
+        width: 100% !important;
+        box-sizing: border-box;
     }
 
+    .swiper-slide,
+    .image-card {
+        width: 260px !important;
+        height: 380px !important;
+    }
+
+    .swiper-slide img,
+    .image-card img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 12px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .all_best_img img {
         width: 1024px;
-        /* height: 100vh; */
+        max-width: 100%;
     }
 }
