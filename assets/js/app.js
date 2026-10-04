@@ -37,3 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const dropdownLink = document.getElementById('dropdownMenuLink');
+
+if (dropdownLink) {
+    dropdownLink.addEventListener('click', function () {
+        this.classList.toggle('rotate');
+    });
+
+    // Səhifədə başqa yerə kliklədikdə dropdown bağlanırsa, ox da düzəlsin
+    document.addEventListener('click', function (e) {
+        if (!dropdownLink.contains(e.target)) {
+            dropdownLink.classList.remove('rotate');
+        }
+    });
+}

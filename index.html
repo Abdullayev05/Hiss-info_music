@@ -8,7 +8,6 @@
     <title>Hiss haqqında veb-sayt</title>
     <meta property="og:title" content="Hiss haqqında veb-sayt" />
 
-    <!-- CSS Kitabxanaları -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,15 +15,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- JavaScript Kitabxanaları (Yalnız Bootstrap 5 Bundle və Swiper) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-    <!-- Fərdi Skriptlər -->
     <script defer src="./assets/js/app.js"></script>
+    <script defer src="./assets/js/albom.js"></script>
+    <script defer src="./assets/js/akustiks.js"></script>
+    <script defer src="./assets/js/klipler-api.js"></script>
     <script defer src="./assets/js/backgrnd_swiper.js"></script>
     <script defer src="./assets/js/swiper.js"></script>
     <script defer src="./assets/js/drop.js"></script>
@@ -361,21 +369,24 @@
 
 
     <section class="section_4">
-        <!-- Arxa fondakı dinamik şəkil qatı -->
         <div class="clips-bg-overlay">
             <img id="activeClipBg" src="./assets/hiss-klips-videos/bela-poster.jpg" alt="Active Clip Background">
             <div class="clips-gradient"></div>
         </div>
 
         <div class="container clips-container">
-            <!-- Üst Hissə -->
             <div class="clips-header-wrapper">
-                <div class="clips-top-tag">
-                </div>
+                <div class="clips-top-tag"></div>
                 <h2 class="clips-title">Kliplər</h2>
                 <a href="./assets/pages/klipler.html" class="btn-outline">
                     Bütün kliplər <span class="arrow">→</span>
                 </a>
+
+                <!-- Sağca-sola çəirmək üçün düymələr başlığın altında və ya uyğun yerdə -->
+                <!-- <div class="clips-nav-buttons">
+                <div class="video-prev">&#10094;</div>
+                <div class="video-next">&#10095;</div>
+            </div> -->
             </div>
 
             <div class="swiper video-swiper">
@@ -383,46 +394,70 @@
                     <div class="swiper-slide clip-card" data-bg="./assets/hiss-klips-videos/sen-olanda-poster.jpg">
                         <div class="video-overlay"></div>
                         <div class="clip-thumb">
-                            <video controls preload="metadata">
-                                <source src="./assets/hiss-klips-videos/Ayaz Babayev x Hiss – Sən Olanda (XT).mp4">
+                            <video preload="metadata">
+                                <source src="./assets/hiss-klips-videos/Ayaz Babayev x Hiss – Sən Olanda (XT).mp4"
+                                    type="video/mp4">
                             </video>
+                            <div class="custom-play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="clip-info">
                             <h4>Sən Olanda</h4>
                             <span>Hiss & Ayaz Babayev</span>
                         </div>
                     </div>
+
                     <div class="swiper-slide clip-card" data-bg="./assets/hiss-klips-videos/best-klip-poster.jpg">
                         <div class="video-overlay"></div>
                         <div class="clip-thumb">
-                            <video controls preload="metadata">
+                            <video preload="metadata">
                                 <source src="./assets/hiss-klips-videos/Best-klip.mp4" type="video/mp4">
                             </video>
+                            <div class="custom-play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="clip-info">
                             <h4>Best</h4>
                             <span>Hiss</span>
                         </div>
                     </div>
+
                     <div class="swiper-slide clip-card" data-bg="./assets/hiss-klips-videos/baki-tanisin-poster.jpg">
                         <div class="video-overlay"></div>
                         <div class="clip-thumb">
-                            <video controls preload="metadata">
+                            <video preload="metadata">
                                 <source src="./assets/hiss-klips-videos/Hiss — Bakı Tanısın .mp4" type="video/mp4">
                             </video>
+                            <div class="custom-play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="clip-info">
                             <h4>Bakı Tanısın</h4>
                             <span>Hiss</span>
                         </div>
                     </div>
+
                     <div class="swiper-slide clip-card" data-bg="./assets/hiss-klips-videos/esq-limani-poster.jpg">
                         <div class="video-overlay"></div>
                         <div class="clip-thumb">
-                            <video controls preload="metadata">
+                            <video preload="metadata">
                                 <source src="./assets/hiss-klips-videos/Hiss — Eşq Limanı (Lyrics Video).mp4"
                                     type="video/mp4">
                             </video>
+                            <div class="custom-play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="clip-info">
                             <h4>Eşq Limanı</h4>
@@ -434,14 +469,268 @@
         </div>
     </section>
 
+    <!-- section-5 -->
+   <section class="gatefold-album-section">
+    <div class="gatefold-wrapper">
+        
+        <!-- ÜMUMİ YUXARI BAŞLIQ: Bütün komponentin (şəkil və siyahının) yuxarısında yerləşən "Albom" sözü -->
+        <div class="gatefold-main-header">
+            <h2>Albom</h2>
+        </div>
 
-    <section class="section_5">
-        <h2>Albom</h2>
-    </section>
+        <div class="gatefold-content-grid">
+            <!-- SOL TƏRƏF / YUXARI: Albomun Əsas Sənət Qapağı və Player -->
+            <div class="gatefold-left-art">
+                <div class="vinyl-sleeve-bg"></div>
+                <div class="art-frame">
+                    <img src="./assets/imgs-2/unuduram_pht.jfif" alt="Unuduram Qapağı" id="GatefoldActiveCover">
+                    <div class="art-overlay-info">
+                        <h2 id="GatefoldActiveTitle">Unuduram</h2>
+                        <p id="GatefoldActiveArtist">HİSS</p>
+                        
+                        <!-- İrəliləmə Xətti və Vaxtlar -->
+                        <div class="player-progress-area">
+                            <div class="time-info">
+                                <span id="CurrentTime">0:00</span>
+                                <span id="ActiveDuration">--:--</span>
+                            </div>
+                            <input type="range" id="SongProgressBar" value="0" min="0" max="100" step="0.1">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- SAĞ TƏRƏF / AŞAĞI: Mahnı Siyahısı -->
+            <div class="gatefold-right-tracks">
+                <div class="gatefold-track-grid">
+                    <!-- 1-ci Mahnı -->
+                    <div class="g-track-card active" onclick="playGatefoldSong(this, 'g-1', 'Unuduram', './assets/imgs-2/unuduram_pht.jfif')">
+                        <div class="g-info">
+                            <h4>Unuduram</h4>
+                        </div>
+                        <div class="g-time track-duration" data-audio="g-1">--:--</div>
+                        <div class="g-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <audio id="g-1" src="./assets/mp3/Unuduram Audio 2024-05-07 at 13.52.53_cbcad99e.mp3"></audio>
+
+                    <!-- 2-ci Mahnı -->
+                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-2', 'İddia', './assets/imgs-2/6_mp3_pht.jfif')">
+                        <div class="g-info">
+                            <h4>İddia</h4>
+                        </div>
+                        <div class="g-time track-duration" data-audio="g-2">--:--</div>
+                        <div class="g-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <audio id="g-2" src="./assets/mp3/İddia Audio 2024-05-07 at 13.49.16_dfc86a31.mp3"></audio>
+
+                    <!-- 3-cü Mahnı -->
+                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-3', 'Mars', './assets/imgs-2/6_mp3_pht.jfif')">
+                        <div class="g-info">
+                            <h4>Mars</h4>
+                        </div>
+                        <div class="g-time track-duration" data-audio="g-3">--:--</div>
+                        <div class="g-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <audio id="g-3" src="./assets/mp3/Mars Audio 2024-05-07 at 14.54.49_acc17fbc.mp3"></audio>
+
+                    <!-- 4-cü Mahnı -->
+                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-4', 'Nasa', './assets/imgs-2/6_mp3_pht.jfif')">
+                        <div class="g-info">
+                            <h4>Nasa</h4>
+                        </div>
+                        <div class="g-time track-duration" data-audio="g-4">--:--</div>
+                        <div class="g-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <audio id="g-4" src="./assets/mp3/Nasa Audio 2024-05-07 at 13.54.18_b44d00d4.mp3"></audio>
+
+                    <!-- 5-ci Mahnı -->
+                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-5', 'Betərin betəri', './assets/imgs-2/6_mp3_pht.jfif')">
+                        <div class="g-info">
+                            <h4>Betərin betəri</h4>
+                        </div>
+                        <div class="g-time track-duration" data-audio="g-5">--:--</div>
+                        <div class="g-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <audio id="g-5" src="./assets/mp3/BetərinBetəri Audio 2024-05-07 at 13.58.12_d06aa035.mp3"></audio>
+
+                    <!-- 6-cı Mahnı -->
+                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-6', 'Varmı', './assets/imgs-2/6_mp3_pht.jfif')">
+                        <div class="g-info">
+                            <h4>Varmı</h4>
+                        </div>
+                        <div class="g-time track-duration" data-audio="g-6">--:--</div>
+                        <div class="g-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <audio id="g-6" src="./assets/mp3/Varmı Audio 2024-05-07 at 14.57.48_7c2bcf2c.mp3"></audio>
+
+                    <!-- 7-ci Mahnı -->
+                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-7', 'Ulduzların Altında', './assets/imgs-2/6_mp3_pht.jfif')">
+                        <div class="g-info">
+                            <h4>Ulduzların Altında</h4>
+                        </div>
+                        <div class="g-time track-duration" data-audio="g-7">--:--</div>
+                        <div class="g-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <audio id="g-7" src="./assets/mp3/WhatsApp Audio 2024-05-07 at 13.41.53_b7d9cb85.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <section class="section_6">
         <h2>Akustiklər</h2>
+
+        <div class="acoustic-container">
+            <!-- Sol Tərəf: Albom Qapağı və İrəliləyiş Xətti (Progress Bar) -->
+            <div class="album-side">
+                <div class="album-cover-wrapper">
+                    <img src="./assets/imgs-2/akustiks_pht.jfif" alt="HİSS Special Acoustic">
+                </div>
+                <div class="album-info">
+                    <h3 id="current-song-title">Special Acoustic</h3>
+                    <p>HİSS</p>
+                </div>
+
+                <!-- Yeni Pleyer İdarəetmə Paneli (Xətt və Saniyələr) -->
+                <div class="player-controls" id="player-controls">
+                    <div class="time-info">
+                        <span id="current-time">0:00</span>
+                        <span id="total-duration">0:00</span>
+                    </div>
+                    <div class="progress-bar-container" id="progress-container" onclick="setProgress(event)">
+                        <div class="progress-bar" id="progress-bar">
+                            <!-- Xəttin ucunda hərəkət edən qırmızı nöqtə -->
+                            <div class="progress-thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ Tərəf: Mahnı Siyahısı -->
+            <div class="playlist-side" id="playlist">
+
+                <!-- 1. Busan -->
+                <div class="song-item" onclick="playSong(this, 'audio-busan', 'Busan (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Busan (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:12</span>
+                    <audio id="audio-busan" class="audio-element"
+                        src="./assets/akustiks_mp3/Busan (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 2. Çək -->
+                <div class="song-item" onclick="playSong(this, 'audio-cek', 'Çək (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Çək (Akustik)</span>
+                    </div>
+                    <span class="song-duration">2:55</span>
+                    <audio id="audio-cek" class="audio-element" src="./assets/akustiks_mp3/Çək (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 3. Cəsarət -->
+                <div class="song-item" onclick="playSong(this, 'audio-cesaret', 'Cəsarət (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Cəsarət (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:40</span>
+                    <audio id="audio-cesaret" class="audio-element"
+                        src="./assets/akustiks_mp3/Cəsarət (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 4. Karma -->
+                <div class="song-item" onclick="playSong(this, 'audio-karma', 'Karma (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Karma (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:05</span>
+                    <audio id="audio-karma" class="audio-element"
+                        src="./assets/akustiks_mp3/Karma (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 5. Kəpənəklər -->
+                <div class="song-item" onclick="playSong(this, 'audio-kepenekler', 'Kəpənəklər (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Kəpənəklər (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:20</span>
+                    <audio id="audio-kepenekler" class="audio-element"
+                        src="./assets/akustiks_mp3/Kəpənəklər (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 6. Mars -->
+                <div class="song-item" onclick="playSong(this, 'audio-mars', 'Mars (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Mars (Akustik)</span>
+                    </div>
+                    <span class="song-duration">2:48</span>
+                    <audio id="audio-mars" class="audio-element" src="./assets/akustiks_mp3/Mars (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 7. Nasa -->
+                <div class="song-item" onclick="playSong(this, 'audio-nasa', 'Nasa (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Nasa (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:15</span>
+                    <audio id="audio-nasa" class="audio-element" src="./assets/akustiks_mp3/Nasa (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 8. Sayıram -->
+                <div class="song-item" onclick="playSong(this, 'audio-sayiram', 'Sayıram (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Sayıram (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:30</span>
+                    <audio id="audio-sayiram" class="audio-element"
+                        src="./assets/akustiks_mp3/Sayıram (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 9. Sevdim -->
+                <div class="song-item" onclick="playSong(this, 'audio-sevdim', 'Sevdim (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Sevdim (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:02</span>
+                    <audio id="audio-sevdim" class="audio-element"
+                        src="./assets/akustiks_mp3/Sevdim (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 10. Ulduzların Altında -->
+                <div class="song-item" onclick="playSong(this, 'audio-ulduzlarin', 'Ulduzların Altında (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Ulduzların Altında (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:45</span>
+                    <audio id="audio-ulduzlarin" class="audio-element"
+                        src="./assets/akustiks_mp3/Ulduzların Altında (Akustik).mp3"></audio>
+                </div>
+
+                <!-- 11. Unuduram -->
+                <div class="song-item" onclick="playSong(this, 'audio-unuduram', 'Unuduram (Akustik)')">
+                    <div class="song-info">
+                        <div class="play-btn-mini"><i class="fas fa-play"></i></div>
+                        <span class="song-title">Unuduram (Akustik)</span>
+                    </div>
+                    <span class="song-duration">3:10</span>
+                    <audio id="audio-unuduram" class="audio-element"
+                        src="./assets/akustiks_mp3/Unuduram (Akustik).mp3"></audio>
+                </div>
+
+            </div>
+        </div>
     </section>
 
 

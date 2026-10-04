@@ -238,6 +238,14 @@ header a {
     overflow: hidden;
 }
 
+.dropdown-toggle::after {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.rotate::after {
+    transform: rotate(180deg);
+}
+
 .dropdown.show .dropdown-menu,
 .dropdown-menu.show {
     opacity: 1;
@@ -1133,20 +1141,45 @@ header a {
 .clips-nav-buttons {
     display: flex;
     gap: 10px;
+    margin-top: 20px;
+}
+
+/* .custom-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: #e50914;
+} */
+.custom-play-btn {
     position: absolute;
-    top: 10px;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 0, 13, 0.678);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffffb0;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.custom-play-btn svg {
+    margin-left: 3px;
+    /* İkonu tam mərkəzə salmaq üçün */
 }
 
 .video-prev,
 .video-next {
-    position: static !important;
-    width: 40px !important;
-    height: 40px !important;
-    background: rgba(20, 23, 31, 0.8) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 50% !important;
-    color: #ffffff !important;
+    width: 40px;
+    height: 40px;
+    background: rgba(20, 23, 31, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1157,8 +1190,8 @@ header a {
 
 .video-prev:hover,
 .video-next:hover {
-    background: #e50914 !important;
-    border-color: #e50914 !important;
+    background: #e50914;
+    border-color: #e50914;
 }
 
 .video-prev::after,
@@ -1256,46 +1289,495 @@ header a {
 
 /* albom start */
 
-.section_5 {
-    background-color: #0c0d10; /* Şəkildəki qara fon rəngi */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh; /* İstəyə görə hündürlüyü dəyişə bilərsiniz */
-    font-family: sans-serif;
-}
+.gatefold-album-section {
+        background-color: #0b1320;
+        color: #f0f4f8;
+        padding: 80px 20px;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-.section_5 h2 {
-    color: #ffffff;
-    font-size: 42px; /* Şəkildəki yazı ölçüsünə uyğunlaşdırılıb */
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin: 0;
-}
+    .gatefold-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 1100px;
+        width: 100%;
+        background: rgba(18, 28, 45, 0.65);
+        border: 1px solid rgba(135, 206, 235, 0.15);
+        border-radius: 28px;
+        padding: 40px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 30px 60px rgba(5, 10, 20, 0.8);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Ümumi yuxarı başlığın dizaynı */
+    .gatefold-main-header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 35px;
+        border-bottom: 1px solid rgba(135, 206, 235, 0.12);
+        padding-bottom: 15px;
+    }
+
+    .gatefold-main-header h2 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: 3px;
+        color: #fff;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /* Şəkil və Siyahını yan-yana saxlayan grid */
+    .gatefold-content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .gatefold-left-art {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vinyl-sleeve-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(135, 206, 250, 0.15) 0%, transparent 70%);
+        filter: blur(40px);
+        z-index: 1;
+    }
+
+    .art-frame {
+        width: 100%;
+        max-width: 380px;
+        aspect-ratio: 1/1;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        border: 1px solid rgba(135, 206, 235, 0.25);
+    }
+
+    .art-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease, opacity 0.3s ease;
+    }
+
+    .art-overlay-info {
+        position: absolute;
+        bottom: 0; left: 0; width: 100%;
+        padding: 20px 25px;
+        background: linear-gradient(to top, rgba(11, 19, 32, 0.95) 20%, transparent 100%);
+        box-sizing: border-box;
+    }
+
+    .art-overlay-info h2 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin-bottom: 2px;
+        color: #fff;
+    }
+
+    .art-overlay-info p {
+        font-size: 0.8rem;
+        color: #a3b8cc;
+        margin-bottom: 12px;
+    }
+
+    /* PLAYER PROGRESS */
+    .player-progress-area {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .time-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        font-family: monospace;
+        color: #8da2b8;
+    }
+
+    #SongProgressBar {
+        width: 100%;
+        height: 6px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #SongProgressBar::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #73a5c6;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    #SongProgressBar::-webkit-slider-thumb:hover {
+        transform: scale(1.3);
+    }
+
+    .gatefold-right-tracks {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .gatefold-track-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 400px;
+        overflow-y: auto;
+        padding-right: 4px;
+    }
+
+    .gatefold-track-grid::-webkit-scrollbar {
+        width: 3px;
+    }
+    .gatefold-track-grid::-webkit-scrollbar-thumb {
+        background: rgba(115, 165, 198, 0.3);
+        border-radius: 4px;
+    }
+
+    .g-track-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(135, 206, 235, 0.08);
+        border-radius: 12px;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .g-track-card:hover {
+        background: rgba(115, 165, 198, 0.08);
+        border-color: rgba(115, 165, 198, 0.3);
+        transform: translateX(4px);
+    }
+
+    .g-track-card.active {
+        background: rgba(115, 165, 198, 0.18);
+        border-color: #73a5c6;
+        box-shadow: 0 0 20px rgba(115, 165, 198, 0.25);
+    }
+
+    .g-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .g-info h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #f0f4f8;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .g-time {
+        font-size: 0.85rem;
+        color: #73a5c6;
+        font-family: monospace;
+        font-weight: 600;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .g-icon {
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8da2b8;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        transition: 0.3s;
+    }
+
+    .g-track-card:hover .g-icon, .g-track-card.active .g-icon {
+        background: #73a5c6;
+        color: #0b1320;
+    }
 
 
 
 
 /* albom finish */
 
+
+
+
 /* akustikler start */
 
 .section_6 {
-    background-color: #0c0d10; /* Şəkildəki qara fon rəngi */
+    background-color: #0b0b0b;
+    color: #ffffff;
+    padding: 60px 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 50vh; /* İstəyə görə hündürlüyü dəyişə bilərsiniz */
-    font-family: sans-serif;
+    width: 100%;
 }
 
 .section_6 h2 {
-    color: #ffffff;
-    font-size: 42px; /* Şəkildəki yazı ölçüsünə uyğunlaşdırılıb */
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(45deg, #fff, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.acoustic-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 77, 77, 0.15);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(179, 27, 27, 0.1);
+    overflow: hidden;
+}
+
+.album-side {
+    flex: 1;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(179, 27, 27, 0.15) 0%, transparent 70%);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.album-cover-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(179, 27, 27, 0.3);
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.album-cover-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.album-cover-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album-info {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.album-info h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.album-info p {
+    font-size: 0.85rem;
+    color: #a1a1a1;
+    margin-top: 3px;
+}
+
+/* Pleyer İdarəetmə Paneli (Xətt və Vaxt) */
+.player-controls {
+    width: 100%;
+    max-width: 260px;
+    margin-top: 20px;
+    display: none;
+    /* Əvvəlcə tamamilə gizli olur */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.player-controls.show {
+    display: block;
+    /* Mahnı başlayanda görünür */
+    opacity: 1;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: visible;
+    /* Nöqtənin xaricə daşması üçün visible olmalıdır */
+    position: relative;
+    margin-top: 4px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
+    /* Daha canlı qırmızı rəng keçidi */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+    /* Qırmızı parıltı effekti */
+    transition: width 0.1s linear;
+}
+
+.progress-thumb {
+    position: absolute;
+    right: -5px;
+    /* Xəttin tam ucunda dayanması üçün */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border: 2px solid #ff4d4d;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.8);
+    pointer-events: none;
+}
+
+.playlist-side {
+    flex: 1.2;
+    padding: 30px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.playlist-side::-webkit-scrollbar {
+    width: 6px;
+}
+
+.playlist-side::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.playlist-side::-webkit-scrollbar-thumb {
+    background: rgba(179, 27, 27, 0.5);
+    border-radius: 10px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.song-item:hover {
+    background: rgba(179, 27, 27, 0.15);
+    border-color: rgba(179, 27, 27, 0.4);
+    transform: translateX(5px);
+}
+
+.song-item.active {
+    background: rgba(179, 27, 27, 0.25);
+    border-color: #b31b1b;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.play-btn-mini {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.song-item:hover .play-btn-mini,
+.song-item.active .play-btn-mini {
+    background: #b31b1b;
+    color: #fff;
+}
+
+.song-title {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #e1e1e1;
+}
+
+.song-item.active .song-title {
+    font-weight: 600;
+    color: #fff;
+}
+
+.song-duration {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.audio-element {
+    display: none;
+}
+
+
+
 
 
 
@@ -1382,6 +1864,87 @@ header a {
         width: 220px !important;
         height: 320px !important;
     }
+
+    .acoustic-container {
+        flex-direction: column;
+        /* Şəkil yuxarıda qalır, siyahı aşağı düşür */
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .album-side {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 20px 10px;
+        width: 100%;
+    }
+
+    .album-cover-wrapper {
+        max-width: 200px;
+        /* Telefonda şəklin ölçüsü ideal olsun */
+    }
+
+    .player-controls {
+        max-width: 260px;
+        /* Pleyer xəttinin genişliyi */
+    }
+
+    .playlist-side {
+        flex: 1.2;
+        padding: 25px 20px;
+        max-height: 450px;
+        overflow-y: auto;
+    }
+
+    .play-btn-mini {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: #fff;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+
+    .gatefold-album-section {
+            padding: 20px 10px;
+        }
+
+        .gatefold-wrapper {
+            padding: 20px 15px;
+        }
+
+        .gatefold-main-header {
+            margin-bottom: 20px;
+        }
+
+        .gatefold-content-grid {
+            /* Şəkil yuxarıda, mahnı siyahısı birbaşa aşağıda alt-alta düzülür */
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .gatefold-left-art {
+            width: 100%;
+            align-items: center;
+        }
+
+        .art-frame {
+            max-width: 280px;
+            width: 100%;
+        }
+
+        .gatefold-right-tracks {
+            width: 100%;
+        }
+
+        .gatefold-track-grid {
+            max-height: 300px;
+        }
 }
 
 @media (max-width: 992px) {
@@ -1671,6 +2234,75 @@ header a {
         object-fit: cover !important;
         border-radius: 12px;
     }
+
+    .acoustic-container {
+        flex-direction: column;
+        /* Şəkil yuxarıda qalır, siyahı aşağı düşür */
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .album-side {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 20px 10px;
+        width: 100%;
+    }
+
+    .album-cover-wrapper {
+        max-width: 200px;
+        /* Telefonda şəklin ölçüsü ideal olsun */
+    }
+
+    .player-controls {
+        max-width: 260px;
+        /* Pleyer xəttinin genişliyi */
+    }
+
+    .playlist-side {
+        flex: none;
+        width: 100%;
+        max-height: 400px;
+        /* Mahnı siyahısının aşağıda sürüşdürülməsi üçün */
+        padding: 10px 0 0 0;
+    }
+    
+
+    .gatefold-album-section {
+            padding: 20px 10px;
+        }
+
+        .gatefold-wrapper {
+            padding: 20px 15px;
+        }
+
+        .gatefold-main-header {
+            margin-bottom: 20px;
+        }
+
+        .gatefold-content-grid {
+            /* Şəkil yuxarıda, mahnı siyahısı birbaşa aşağıda alt-alta düzülür */
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .gatefold-left-art {
+            width: 100%;
+            align-items: center;
+        }
+
+        .art-frame {
+            max-width: 280px;
+            width: 100%;
+        }
+
+        .gatefold-right-tracks {
+            width: 100%;
+        }
+
+        .gatefold-track-grid {
+            max-height: 300px;
+        }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

@@ -70,16 +70,66 @@ document.addEventListener("play", (event) => {
         currentPlayingVideo = target;
     }
 }, true);
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Swiper-in başladılması
+    const videoSwiper = new Swiper('.video-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        touchStartPreventDefault: false,
+        navigation: {
+            nextEl: '.video-next',
+            prevEl: '.video-prev',
+        },
+    });
 
-// Swiper ayarları
-// const swiper = new Swiper(".video-swiper", {
-//     slidesPerView: "auto",
-//     spaceBetween: 20,
-//     touchStartPreventDefault: false,
-//     simulateTouch: true,
-//     allowTouchMove: true,
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-// });
+    let currentPlayingVideo = null;
+
+    // 2. Play düyməsinə klikləmə mexanizmi
+    document.addEventListener('click', (e) => {
+        const playBtn = e.target.closest('.custom-play-btn');
+        if (!playBtn) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const card = playBtn.closest('.clip-card');
+        if (!card) return;
+
+        const video = card.querySelector('video');
+        if (!video) return;
+
+        // Digər bütün oynatılan videoları dayandır
+        document.querySelectorAll('video').forEach(v => {
+            if (v !== video) {
+                v.pause();
+                v.removeAttribute('controls');
+                const otherCard = v.closest('.clip-card');
+                const otherBtn = otherCard?.querySelector('.custom-play-btn');
+                if (otherBtn) otherBtn.style.display = 'flex';
+            }
+        });
+
+        // Seçilən videonu işə sal
+        video.controls = true;
+        video.play().then(() => {
+            playBtn.style.display = 'none';
+            currentPlayingVideo = video;
+        }).catch(err => {
+            console.error("Video oynatma xətası:", err);
+        });
+    });
+
+    // 3. Video dayandırıldıqda və ya başqa yerdən pauza veriləndə play düyməsini qaytar
+    document.addEventListener('pause', (e) => {
+        if (e.target.tagName !== 'VIDEO') return;
+        const video = e.target;
+        const card = video.closest('.clip-card');
+        const playBtn = card?.querySelector('.custom-play-btn');
+        if (playBtn) {
+            playBtn.style.display = 'flex';
+        }
+        video.removeAttribute('controls');
+    }, true);
+});
