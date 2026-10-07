@@ -157,6 +157,19 @@
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide song-card">
+                            <img src="./assets/imgs-2/hiss_ayaz_sen_olanda.webp" alt="">
+                            <span>Sən olanda</span>
+                            <audio class="audio-element"
+                                src="./assets/short_mp3/Ayaz Babayev x Hiss – Sən Olanda (XT) (mp3cut.net).mp3"></audio>
+                            <button class="play-button" type="button">
+                                <i class="fa-solid fa-play main-icon"></i>
+                                <svg class="progress-ring" width="60" height="60">
+                                    <circle class="progress-ring__bg" cx="30" cy="30" r="21" />
+                                    <circle class="progress-ring__circle" cx="30" cy="30" r="21" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="swiper-slide song-card">
                             <img src="./assets/imgs/karma.jpg" alt="Karma">
                             <span>Karma</span>
                             <audio class="audio-element"
@@ -470,114 +483,122 @@
     </section>
 
     <!-- section-5 -->
-   <section class="gatefold-album-section">
-    <div class="gatefold-wrapper">
-        
-        <!-- ÜMUMİ YUXARI BAŞLIQ: Bütün komponentin (şəkil və siyahının) yuxarısında yerləşən "Albom" sözü -->
-        <div class="gatefold-main-header">
-            <h2>Albom</h2>
-        </div>
+    <section class="gatefold-album-section">
+        <div class="gatefold-wrapper">
 
-        <div class="gatefold-content-grid">
-            <!-- SOL TƏRƏF / YUXARI: Albomun Əsas Sənət Qapağı və Player -->
-            <div class="gatefold-left-art">
-                <div class="vinyl-sleeve-bg"></div>
-                <div class="art-frame">
-                    <img src="./assets/imgs-2/unuduram_pht.jfif" alt="Unuduram Qapağı" id="GatefoldActiveCover">
-                    <div class="art-overlay-info">
-                        <h2 id="GatefoldActiveTitle">Unuduram</h2>
-                        <p id="GatefoldActiveArtist">HİSS</p>
-                        
-                        <!-- İrəliləmə Xətti və Vaxtlar -->
-                        <div class="player-progress-area">
-                            <div class="time-info">
-                                <span id="CurrentTime">0:00</span>
-                                <span id="ActiveDuration">--:--</span>
+            <!-- ÜMUMİ YUXARI BAŞLIQ: Bütün komponentin (şəkil və siyahının) yuxarısında yerləşən "Albom" sözü -->
+            <div class="gatefold-main-header">
+                <h2>Albom</h2>
+            </div>
+
+            <div class="gatefold-content-grid">
+                <!-- SOL TƏRƏF / YUXARI: Albomun Əsas Sənət Qapağı və Player -->
+                <div class="gatefold-left-art">
+                    <div class="vinyl-sleeve-bg"></div>
+                    <div class="art-frame">
+                        <img src="./assets/imgs-2/unuduram_pht.jfif" alt="Unuduram Qapağı" id="GatefoldActiveCover">
+                        <div class="art-overlay-info">
+                            <h2 id="GatefoldActiveTitle">Unuduram</h2>
+                            <p id="GatefoldActiveArtist">HİSS</p>
+
+                            <!-- İrəliləmə Xətti və Vaxtlar -->
+                            <div class="player-progress-area">
+                                <div class="time-info">
+                                    <span id="CurrentTime">0:00</span>
+                                    <span id="ActiveDuration">--:--</span>
+                                </div>
+                                <input type="range" id="SongProgressBar" value="0" min="0" max="100" step="0.1">
                             </div>
-                            <input type="range" id="SongProgressBar" value="0" min="0" max="100" step="0.1">
                         </div>
+                    </div>
+                </div>
+
+                <!-- SAĞ TƏRƏF / AŞAĞI: Mahnı Siyahısı -->
+                <div class="gatefold-right-tracks">
+                    <div class="gatefold-track-grid">
+                        <!-- 1-ci Mahnı -->
+                        <div class="g-track-card active"
+                            onclick="playGatefoldSong(this, 'g-1', 'Unuduram', './assets/imgs-2/unuduram_pht.jfif')">
+                            <div class="g-info">
+                                <h4>Unuduram</h4>
+                            </div>
+                            <div class="g-time track-duration" data-audio="g-1">--:--</div>
+                            <div class="g-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                        <audio id="g-1" src="./assets/mp3/Unuduram Audio 2024-05-07 at 13.52.53_cbcad99e.mp3"></audio>
+
+                        <!-- 2-ci Mahnı -->
+                        <div class="g-track-card"
+                            onclick="playGatefoldSong(this, 'g-2', 'İddia', './assets/imgs-2/6_mp3_pht.jfif')">
+                            <div class="g-info">
+                                <h4>İddia</h4>
+                            </div>
+                            <div class="g-time track-duration" data-audio="g-2">--:--</div>
+                            <div class="g-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                        <audio id="g-2" src="./assets/mp3/İddia Audio 2024-05-07 at 13.49.16_dfc86a31.mp3"></audio>
+
+                        <!-- 3-cü Mahnı -->
+                        <div class="g-track-card"
+                            onclick="playGatefoldSong(this, 'g-3', 'Mars', './assets/imgs-2/6_mp3_pht.jfif')">
+                            <div class="g-info">
+                                <h4>Mars</h4>
+                            </div>
+                            <div class="g-time track-duration" data-audio="g-3">--:--</div>
+                            <div class="g-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                        <audio id="g-3" src="./assets/mp3/Mars Audio 2024-05-07 at 14.54.49_acc17fbc.mp3"></audio>
+
+                        <!-- 4-cü Mahnı -->
+                        <div class="g-track-card"
+                            onclick="playGatefoldSong(this, 'g-4', 'Nasa', './assets/imgs-2/6_mp3_pht.jfif')">
+                            <div class="g-info">
+                                <h4>Nasa</h4>
+                            </div>
+                            <div class="g-time track-duration" data-audio="g-4">--:--</div>
+                            <div class="g-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                        <audio id="g-4" src="./assets/mp3/Nasa Audio 2024-05-07 at 13.54.18_b44d00d4.mp3"></audio>
+
+                        <!-- 5-ci Mahnı -->
+                        <div class="g-track-card"
+                            onclick="playGatefoldSong(this, 'g-5', 'Betərin betəri', './assets/imgs-2/6_mp3_pht.jfif')">
+                            <div class="g-info">
+                                <h4>Betərin betəri</h4>
+                            </div>
+                            <div class="g-time track-duration" data-audio="g-5">--:--</div>
+                            <div class="g-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                        <audio id="g-5"
+                            src="./assets/mp3/BetərinBetəri Audio 2024-05-07 at 13.58.12_d06aa035.mp3"></audio>
+
+                        <!-- 6-cı Mahnı -->
+                        <div class="g-track-card"
+                            onclick="playGatefoldSong(this, 'g-6', 'Varmı', './assets/imgs-2/6_mp3_pht.jfif')">
+                            <div class="g-info">
+                                <h4>Varmı</h4>
+                            </div>
+                            <div class="g-time track-duration" data-audio="g-6">--:--</div>
+                            <div class="g-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                        <audio id="g-6" src="./assets/mp3/Varmı Audio 2024-05-07 at 14.57.48_7c2bcf2c.mp3"></audio>
+
+                        <!-- 7-ci Mahnı -->
+                        <div class="g-track-card"
+                            onclick="playGatefoldSong(this, 'g-7', 'Ulduzların Altında', './assets/imgs-2/6_mp3_pht.jfif')">
+                            <div class="g-info">
+                                <h4>Ulduzların Altında</h4>
+                            </div>
+                            <div class="g-time track-duration" data-audio="g-7">--:--</div>
+                            <div class="g-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                        <audio id="g-7" src="./assets/mp3/WhatsApp Audio 2024-05-07 at 13.41.53_b7d9cb85.mp3"></audio>
                     </div>
                 </div>
             </div>
 
-            <!-- SAĞ TƏRƏF / AŞAĞI: Mahnı Siyahısı -->
-            <div class="gatefold-right-tracks">
-                <div class="gatefold-track-grid">
-                    <!-- 1-ci Mahnı -->
-                    <div class="g-track-card active" onclick="playGatefoldSong(this, 'g-1', 'Unuduram', './assets/imgs-2/unuduram_pht.jfif')">
-                        <div class="g-info">
-                            <h4>Unuduram</h4>
-                        </div>
-                        <div class="g-time track-duration" data-audio="g-1">--:--</div>
-                        <div class="g-icon"><i class="fas fa-play"></i></div>
-                    </div>
-                    <audio id="g-1" src="./assets/mp3/Unuduram Audio 2024-05-07 at 13.52.53_cbcad99e.mp3"></audio>
-
-                    <!-- 2-ci Mahnı -->
-                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-2', 'İddia', './assets/imgs-2/6_mp3_pht.jfif')">
-                        <div class="g-info">
-                            <h4>İddia</h4>
-                        </div>
-                        <div class="g-time track-duration" data-audio="g-2">--:--</div>
-                        <div class="g-icon"><i class="fas fa-play"></i></div>
-                    </div>
-                    <audio id="g-2" src="./assets/mp3/İddia Audio 2024-05-07 at 13.49.16_dfc86a31.mp3"></audio>
-
-                    <!-- 3-cü Mahnı -->
-                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-3', 'Mars', './assets/imgs-2/6_mp3_pht.jfif')">
-                        <div class="g-info">
-                            <h4>Mars</h4>
-                        </div>
-                        <div class="g-time track-duration" data-audio="g-3">--:--</div>
-                        <div class="g-icon"><i class="fas fa-play"></i></div>
-                    </div>
-                    <audio id="g-3" src="./assets/mp3/Mars Audio 2024-05-07 at 14.54.49_acc17fbc.mp3"></audio>
-
-                    <!-- 4-cü Mahnı -->
-                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-4', 'Nasa', './assets/imgs-2/6_mp3_pht.jfif')">
-                        <div class="g-info">
-                            <h4>Nasa</h4>
-                        </div>
-                        <div class="g-time track-duration" data-audio="g-4">--:--</div>
-                        <div class="g-icon"><i class="fas fa-play"></i></div>
-                    </div>
-                    <audio id="g-4" src="./assets/mp3/Nasa Audio 2024-05-07 at 13.54.18_b44d00d4.mp3"></audio>
-
-                    <!-- 5-ci Mahnı -->
-                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-5', 'Betərin betəri', './assets/imgs-2/6_mp3_pht.jfif')">
-                        <div class="g-info">
-                            <h4>Betərin betəri</h4>
-                        </div>
-                        <div class="g-time track-duration" data-audio="g-5">--:--</div>
-                        <div class="g-icon"><i class="fas fa-play"></i></div>
-                    </div>
-                    <audio id="g-5" src="./assets/mp3/BetərinBetəri Audio 2024-05-07 at 13.58.12_d06aa035.mp3"></audio>
-
-                    <!-- 6-cı Mahnı -->
-                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-6', 'Varmı', './assets/imgs-2/6_mp3_pht.jfif')">
-                        <div class="g-info">
-                            <h4>Varmı</h4>
-                        </div>
-                        <div class="g-time track-duration" data-audio="g-6">--:--</div>
-                        <div class="g-icon"><i class="fas fa-play"></i></div>
-                    </div>
-                    <audio id="g-6" src="./assets/mp3/Varmı Audio 2024-05-07 at 14.57.48_7c2bcf2c.mp3"></audio>
-
-                    <!-- 7-ci Mahnı -->
-                    <div class="g-track-card" onclick="playGatefoldSong(this, 'g-7', 'Ulduzların Altında', './assets/imgs-2/6_mp3_pht.jfif')">
-                        <div class="g-info">
-                            <h4>Ulduzların Altında</h4>
-                        </div>
-                        <div class="g-time track-duration" data-audio="g-7">--:--</div>
-                        <div class="g-icon"><i class="fas fa-play"></i></div>
-                    </div>
-                    <audio id="g-7" src="./assets/mp3/WhatsApp Audio 2024-05-07 at 13.41.53_b7d9cb85.mp3"></audio>
-                </div>
-            </div>
         </div>
-
-    </div>
-</section>
+    </section>
 
     <section class="section_6">
         <h2>Akustiklər</h2>

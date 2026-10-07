@@ -1,28 +1,32 @@
+// --- 1. Mobil Menyu (Hamburger) Funksionallığı ---
 let navToggle = document.querySelector(".nav__toggle");
 let navWrapper = document.querySelector(".nav__wrapper");
-let icon = navToggle.querySelector("i");
+let icon = navToggle ? navToggle.querySelector("i") : null;
 
-navToggle.addEventListener("click", function () {
-  if (navWrapper.classList.contains("active")) {
-    navWrapper.classList.remove("active");
+if (navToggle && navWrapper && icon) {
+    navToggle.addEventListener("click", function () {
+      if (navWrapper.classList.contains("active")) {
+        navWrapper.classList.remove("active");
 
-    icon.classList.remove("fa-xmark");
-    icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
 
-    this.setAttribute("aria-expanded", "false");
-    this.setAttribute("aria-label", "menu");
-  } else {
-    navWrapper.classList.add("active");
+        this.setAttribute("aria-expanded", "false");
+        this.setAttribute("aria-label", "menu");
+      } else {
+        navWrapper.classList.add("active");
 
-    icon.classList.remove("fa-bars");
-    icon.classList.add("fa-xmark");
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
 
-    this.setAttribute("aria-expanded", "true");
-    this.setAttribute("aria-label", "close menu");
-  }
-});
+        this.setAttribute("aria-expanded", "true");
+        this.setAttribute("aria-label", "close menu");
+      }
+    });
+}
 
 
+// --- 2. Service Worker Qeydiyyatı ---
 document.addEventListener("DOMContentLoaded", () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -37,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+// --- 3. Dropdown Menyusu və Ox İşarəsi ---
 const dropdownLink = document.getElementById('dropdownMenuLink');
 
 if (dropdownLink) {
@@ -51,3 +57,16 @@ if (dropdownLink) {
         }
     });
 }
+
+
+// --- 4. Header Skrol Effekti (Aşağı çəkəndə rəng/kölgə gəlməsi) ---
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (header) {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+});

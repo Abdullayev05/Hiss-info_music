@@ -1,7 +1,7 @@
 const heroSwiper = new Swiper('.heroSwiper', {
     loop: true,
     autoplay: {
-        delay: 3500,
+        delay: 1800,
         disableOnInteraction: false,
     },
     // effect: 'fade',  <-- Bu hissəni tamamilə şərhə at (sil)
