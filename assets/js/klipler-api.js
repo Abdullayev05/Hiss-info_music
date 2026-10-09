@@ -1,4 +1,5 @@
 const videos = [
+    { title: "Alright", src: "../hiss-klips-videos/Hiss – Alright.mp4" },
     { title: "Sən olanda", src: "../hiss-klips-videos/Ayaz Babayev x Hiss – Sən Olanda (XT).mp4" },
     { title: "Yuxu Yozmaları", src: "../hiss-klips-videos/Hiss  Yuxu Yozmaları.mp4" },
     { title: "XT", src: "../hiss-klips-videos/Hiss  XT.mp4" },
