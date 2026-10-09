@@ -34,9 +34,9 @@ header {
 
 /* Səhifə aşağı çəkildəndə JS vasitəsilə bu sinif əlavə olunacaq */
 header.scrolled {
-    background-color: rgba(18, 18, 18, 0.95); /* İstədiyin tünd rəng (məsələn, qara/boz tonu) */
+    background-color: rgba(18, 18, 18, 0.514); /* İstədiyin tünd rəng (məsələn, qara/boz tonu) */
     backdrop-filter: blur(10px); /* Arxa fonu zərif bulandıran effekt (glassmorphism) */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* İstədiyin kölgə effekti */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.116); /* İstədiyin kölgə effekti */
     padding-top: 10px;
     padding-bottom: 10px;
 }
